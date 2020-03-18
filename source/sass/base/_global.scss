@@ -7,3 +7,13 @@ body {
   line-height: 1.3;
   font-family: $font-base;
 }
+
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1160px;
+  }
+}

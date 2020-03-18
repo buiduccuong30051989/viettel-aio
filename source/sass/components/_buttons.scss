@@ -1,0 +1,13 @@
+.btn-orange {
+  background-color: $orange;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: darken($orange, 10%);
+  }
+}
+
+.btn-pill {
+  border-radius: 20px;
+}

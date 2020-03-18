@@ -3,5 +3,73 @@
 //-------------------------------------------------------
 
 mixin header
-  header.header
-    h1 header
+  .topbar
+    .container
+      .row.justify-content-md-end.justify-content-center.align-items-center
+        .item.language
+          span Ngôn ngữ
+          .dropdown
+            button.btn.btn-language.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+              img(src='images/vn.png')
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item(href="#")
+                span Vietnamese
+                img(src='images/vn.png')
+              a.dropdown-item(href="#")
+                span English
+                img(src='images/en.png')
+        .item.tel
+          span Tổng đài hỗ trợ:
+            a.pl-2(href='tel: 1900989868') 1900 989868
+        .item.upload
+          button.btn.btn-orange.btn-upload.btn-sm.btn-pill
+            span.pr-2.ic-upload
+            | Đề xuất sản phẩm
+  .header
+    .container
+      .row.justify-content-md-between.justify-content-center.align-items-center
+        button.btn-menu.js-btn-menu
+          span.ic-menu
+        a(href='index.html')
+          img.logo(src='images/logo.png', alt='logo')
+        form.form-search
+          .input-group
+            input.form-control.form-control-lg(type="text" placeholder="Tìm kiếm sản phẩm, dịch vụ,...")
+            .input-group-append
+              button.btn.btn-search.btn-orange(type="button")
+                span.ic-search
+        .user-info
+          .user-info-inner
+            .item
+              .icon
+                span.ic-order
+              .content
+                span Theo dõi đơn hàng
+            .item
+              .icon
+                span.ic-notifications
+              .content
+                span Thông báo của bạn
+            .item
+              .icon
+                span.ic-account
+              .content
+                span Đăng nhập tài khoản
+            .item
+              .icon
+                span.ic-cart
+                span.count 0
+              .content
+                span Giỏ hàng của bạn
+  .menu.js-menu
+    button.btn-menu.js-btn-menu-close
+      span x
+    ul
+      li
+        a(href='#') Menu 01
+      li
+        a(href='#') Menu 02
+      li
+        a(href='#') Menu 03
+      li
+        a(href='#') Menu 04
