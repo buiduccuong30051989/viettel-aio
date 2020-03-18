@@ -195,6 +195,10 @@
   @include breakpoint-down('desktop') {
     padding: 15px 0;
 
+    .user-info {
+      width: 100%;
+    }
+
     .user-info-inner {
       margin-top: 30px;
       width: 100%;

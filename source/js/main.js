@@ -1,6 +1,6 @@
 const ViettelAIO = {
   Init: function() {
-    this.test()
+    this.homeSlider()
     this.menu()
   },
 
@@ -29,25 +29,34 @@ const ViettelAIO = {
     })
   },
 
-  test: function() {
-    $('#owl-carousel').on('initialized.owl.carousel', function(event) {
-      var $currentItem = $('.owl-item', $('#owl-carousel')).eq(event.item.index)
+  homeSlider: function() {
+    $('.js-home-carousel').on('initialized.owl.carousel', function(event) {
+      var $currentItem = $('.owl-item', $('.js-home-carousel')).eq(event.item.index)
       const currentColor = $currentItem.find('.item').data('color')
-      $('.contain').css('background-color', currentColor)
+      $('.js-home-slider').css('background-color', currentColor)
     })
 
-    $('#owl-carousel').owlCarousel({
+    $('.js-home-carousel').owlCarousel({
       loop: true,
-      margin: 30,
       dots: true,
-      nav: true,
-      items: 1
+      center: true,
+      items: 1,
+      animateIn: 'fadeIn',
+      animateOut: 'fadeOut'
     })
 
-    $('#owl-carousel').on('changed.owl.carousel', function(event) {
-      var $currentItem = $('.owl-item', $('#owl-carousel')).eq(event.item.index)
+    $('.js-home-slider-next').click(function() {
+      $('.js-home-carousel').trigger('next.owl.carousel');
+    })
+
+    $('.js-home-slider-prev').click(function() {
+      $('.js-home-carousel').trigger('prev.owl.carousel');
+    })
+
+    $('.js-home-carousel').on('changed.owl.carousel', function(event) {
+      var $currentItem = $('.owl-item', $('.js-home-carousel')).eq(event.item.index)
       const currentColor = $currentItem.find('.item').data('color')
-      $('.contain').css('background-color', currentColor)
+      $('.js-home-slider').css('background-color', currentColor)
     })
   }
 }

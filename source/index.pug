@@ -4,17 +4,35 @@ block head
   +head('Home')
 
 block main
-  .contain
-    #owl-carousel.owl-carousel.owl-theme
-      .item(data-color='#000')
-        | 1
-      .item(data-color='#00918e')
-        | 2
-      .item(data-color='#f78624')
-        | 3
-      .item(data-color='#132726')
-        | 4
-      .item(data-color='#737c7c')
-        | 5
-      .item(data-color='#aab6b6')
-        | 6
+  .home-slider.js-home-slider
+    .container
+      .row
+        .slider-inner
+          .side-cat
+            a(href='#') Điện tử , điện lạnh
+            a(href='#') Nhà thông minh
+            a(href='#') Nhà thông minh
+            a(href='#') Dịch vụ quản lý
+            a(href='#') Dịch vụ nhân công
+            a(href='#') Dịch vụ viễn thông
+            a(href='#') Dịch vụ công nghệ thông tin
+          .side-slider
+            .js-home-carousel.owl-carousel.owl-theme
+              .item(data-color='#000')
+                img(src='https://picsum.photos/940/300?random=1', alt='demo')
+              .item(data-color='#00918e')
+                img(src='https://picsum.photos/940/300?random=2', alt='demo')
+              .item(data-color='#f78624')
+                img(src='https://picsum.photos/940/300?random=3', alt='demo')
+              .item(data-color='#132726')
+                img(src='https://picsum.photos/940/300?random=4', alt='demo')
+              .item(data-color='#737c7c')
+                img(src='https://picsum.photos/940/300?random=5', alt='demo')
+              .item(data-color='#aab6b6')
+                img(src='https://picsum.photos/940/300?random=6', alt='demo')
+            .slider_nav
+              button.js-home-slider-prev.circle-arrow-carousel.prev
+                span.ic-prev
+              button.js-home-slider-next.circle-arrow-carousel.next
+                span.ic-next
+              

@@ -1,0 +1,91 @@
+.home-slider {
+  transition: background-color .3s;
+
+  .slider-inner {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .side-cat {
+    flex: 0 0 200px;
+    background-color: $white;
+    padding: 30px 12.5px 0;
+
+    a {
+      color: $black1;
+      display: block;
+
+      &:not(:last-of-type) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  .side-slider {
+    flex-grow: 1;
+    margin-left: 22px;
+    position: relative;
+    overflow: hidden;
+
+    .owl-dots {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 15px;
+      left: 0;
+
+      .owl-dot {
+        background-color: $black1;
+        opacity: .3;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 10px;
+
+        &:focus {
+          outline: 0;
+          box-shadow: none;
+        }
+
+        &.active {
+          background-color: $color1;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-down('desktop') {
+    .slider-inner {
+      flex-wrap: wrap;
+    }
+
+    .side-cat {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      flex: 0 0 100%;
+      padding: 15px 30px 15px 0;
+      overflow: auto;
+
+      a {
+        width: auto;
+        margin: 0;
+        padding: 0 15px;
+        white-space: nowrap;
+        margin-bottom: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .side-slider {
+      margin-left: 0;
+      padding: 15px;
+      width: 100%;
+    }
+  }
+}

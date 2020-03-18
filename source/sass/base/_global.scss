@@ -17,3 +17,36 @@ body {
     max-width: 1160px;
   }
 }
+
+.circle-arrow-carousel {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 2px 1px 8px 0 rgba(0, 0, 0, .16);
+  background-color: rgba(255, 255, 255, .6);
+  z-index: 3;
+  border: 0;
+  padding: 0;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    box-shadow: none;
+    background-color: $white;
+  }
+
+  &.prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -20px;
+  }
+
+  &.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -20px;
+  }
+}
