@@ -1,0 +1,117 @@
+// ======================================================
+// Components :: Icons
+// ======================================================
+
+// Icon Fonts
+@font-face {
+  font-family: vtaio;
+  src:
+    url('#{$path-fonts}/vtaio.ttf?owxd7s') format('truetype'),
+    url('#{$path-fonts}/vtaio.woff?owxd7s') format('woff'),
+    url('#{$path-fonts}/vtaio.svg?owxd7s#vtaio') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class^='ic-'],
+[class*=' ic-'] {
+  // use !important to prevent issues with browser extensions that change fonts
+  // stylelint-disable-next-line declaration-no-important
+  font-family: $font-family-icons !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$icon-fonts: 'ic';
+
+.#{$icon-fonts}-menu:before {
+  content: '\e900';
+}
+
+.#{$icon-fonts}-prev:before {
+  content: '\e901';
+}
+
+.#{$icon-fonts}-next:before {
+  content: '\e902';
+}
+
+.#{$icon-fonts}-search:before {
+  content: '\e903';
+}
+
+.#{$icon-fonts}-order:before {
+  content: '\e904';
+}
+
+.#{$icon-fonts}-upload:before {
+  content: '\e905';
+}
+
+.#{$icon-fonts}-cart:before {
+  content: '\e906';
+}
+
+.#{$icon-fonts}-notifications:before {
+  content: '\e907';
+}
+
+.#{$icon-fonts}-account:before {
+  content: '\e908';
+}
+
+.#{$icon-fonts}-support .path1:before {
+  content: '\e909';
+  color: rgb(0, 145, 143);
+}
+
+.#{$icon-fonts}-support .path2:before {
+  content: '\e90a';
+  margin-left: -1em;
+  color: rgb(0, 145, 143);
+}
+
+.#{$icon-fonts}-support .path3:before {
+  content: '\e90b';
+  margin-left: -1em;
+  color: rgb(247, 134, 36);
+}
+
+.#{$icon-fonts}-payment .path1:before {
+  content: '\e90c';
+  color: rgb(0, 145, 143);
+}
+
+.#{$icon-fonts}-payment .path2:before {
+  content: '\e90d';
+  margin-left: -1em;
+  color: rgb(247, 134, 36);
+}
+
+.#{$icon-fonts}-email .path1:before {
+  content: '\e90e';
+  color: rgb(247, 134, 36);
+}
+
+.#{$icon-fonts}-email .path2:before {
+  content: '\e90f';
+  margin-left: -.900390625em;
+  color: rgb(0, 145, 143);
+}
+
+.#{$icon-fonts}-change .path1:before {
+  content: '\e910';
+  color: rgb(247, 134, 36);
+}
+
+.#{$icon-fonts}-change .path2:before {
+  content: '\e911';
+  margin-left: -1em;
+  color: rgb(0, 145, 143);
+}
