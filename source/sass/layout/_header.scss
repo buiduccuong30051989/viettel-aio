@@ -92,8 +92,70 @@
 .header {
   background-color: $color1;
 
+  &.header-home {
+    .btn-menu {
+      display: none;
+    }
+  }
+
   .row {
     min-height: 100px;
+  }
+
+  .dropdown-cat {
+    .dropdown-toggle {
+      &:after {
+        display: none;
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+
+      &[aria-expanded='true'] {
+        background-color: $orange;
+        border-color: $orange;
+      }
+    }
+
+    .dropdown-menu {
+      min-width: 260px;
+    }
+
+    .dropdown-item {
+      padding: 9px 12px;
+      color: $black2;
+      display: flex;
+      align-items: center;
+
+      [class*='ic-'] {
+        font-size: 20px;
+        padding-right: 22px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 20px;
+      }
+
+      &:first-of-type {
+        padding-top: 20px;
+      }
+
+      &:hover {
+        background-color: rgba(0, 145, 143, .08);
+
+        [class*='ic-'] {
+          color: $color3;
+        }
+      }
+    }
+
+    &:hover {
+      .dropdown-menu {
+        display: block;
+      }
+    }
   }
 
   .btn-menu {
@@ -194,6 +256,66 @@
           border-color: $orange;
         }
       }
+
+      &.dropdown {
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+
+          .content {
+            white-space: normal;
+          }
+
+          &:after {
+            display: none;
+          }
+
+          &[aria-expanded='true'] {
+            .icon {
+              background-color: $orange;
+              border-color: $orange;
+            }
+          }
+        }
+
+        .dropdown-menu {
+          min-width: 260px;
+        }
+
+        .dropdown-item--user {
+          padding: 9px 12px;
+          color: $black2;
+          display: flex;
+          align-items: center;
+
+          [class*='ic-'] {
+            font-size: 20px;
+            padding-right: 22px;
+          }
+
+          &:last-of-type {
+            padding-bottom: 20px;
+          }
+
+          &:first-of-type {
+            padding-top: 20px;
+          }
+
+          &:hover {
+            background-color: rgba(0, 145, 143, .08);
+
+            [class*='ic-'] {
+              color: $color3;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -216,6 +338,8 @@
 
     .form-search {
       margin-top: 30px;
+      min-width: 100%;
+      padding: 0 15px;
     }
 
     .logo {

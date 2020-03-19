@@ -30,7 +30,7 @@
         "except": [ "first-nested"]
       }
     ],
-    "max-nesting-depth": 4,
+    "max-nesting-depth": 8,
     "selector-pseudo-element-colon-notation": "single",
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",

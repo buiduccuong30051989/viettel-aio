@@ -2,9 +2,9 @@
 //- Modules :: Header
 //-------------------------------------------------------
 
-mixin header
+mixin header(type)
   .topbar
-    .container
+    .container.sm
       .row.justify-content-md-end.justify-content-center.align-items-center
         .item.language
           span Ngôn ngữ
@@ -25,11 +25,20 @@ mixin header
           button.btn.btn-orange.btn-upload.btn-sm.btn-pill
             span.pr-2.ic-upload
             | Đề xuất sản phẩm
-  .header
+  .header(class=type)
     .container
       .row.justify-content-md-between.justify-content-center.align-items-center
-        button.btn-menu.js-btn-menu
-          span.ic-menu
+        .dropdown.dropdown-cat
+          button.btn-menu.dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+            span.ic-menu
+          .dropdown-menu
+            a.dropdown-item(href='#') Điện tử , điện lạnh
+            a.dropdown-item(href='#') Nhà thông minh
+            a.dropdown-item(href='#') Nhà thông minh
+            a.dropdown-item(href='#') Dịch vụ quản lý
+            a.dropdown-item(href='#') Dịch vụ nhân công
+            a.dropdown-item(href='#') Dịch vụ viễn thông
+            a.dropdown-item(href='#') Dịch vụ công nghệ thông tin
         a(href='index.html')
           img.logo(src='images/logo.png', alt='logo')
         form.form-search
@@ -50,26 +59,43 @@ mixin header
                 span.ic-notifications
               .content
                 span Thông báo của bạn
-            .item
-              .icon
-                span.ic-account
-              .content
-                span Đăng nhập tài khoản
+            .item.dropdown
+              .dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                .icon
+                  span.ic-account
+                .content
+                  span Đăng nhập tài khoản
+              .dropdown-menu
+                a.dropdown-item.dropdown-item--user(href="#")
+                  span.ic-account
+                  span Thông tin tài khoản 
+                a.dropdown-item.dropdown-item--user(href="#")
+                  span.ic-account
+                  span Thông báo của tôi
+                a.dropdown-item.dropdown-item--user(href="#")
+                  span.ic-account
+                  span Đơn hàng của tôi
+                a.dropdown-item.dropdown-item--user(href="#")
+                  span.ic-account
+                  span Thông tin thanh toán
+                a.dropdown-item.dropdown-item--user(href="#")
+                  span.ic-account
+                  span Sản phẩm đã xem
             .item
               .icon
                 span.ic-cart
                 span.count 0
               .content
                 span Giỏ hàng của bạn
-  .menu.js-menu
-    button.btn-menu.js-btn-menu-close
-      span x
-    ul
-      li
-        a(href='#') Menu 01
-      li
-        a(href='#') Menu 02
-      li
-        a(href='#') Menu 03
-      li
-        a(href='#') Menu 04
+  //- .menu.js-menu
+  //-   button.btn-menu.js-btn-menu-close
+  //-     span x
+  //-   ul
+  //-     li
+  //-       a(href='#') Menu 01
+  //-     li
+  //-       a(href='#') Menu 02
+  //-     li
+  //-       a(href='#') Menu 03
+  //-     li
+  //-       a(href='#') Menu 04

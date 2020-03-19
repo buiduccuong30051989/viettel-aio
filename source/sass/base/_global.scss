@@ -19,8 +19,24 @@ body {
   }
 }
 
+@include breakpoint-down('smallphone') {
+  .container.sm {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.dropdown-menu {
+  box-shadow: 0 4px 8px 0 rgba(19, 39, 38, .08);
+  padding: 0;
+  margin-top: -4px;
+  /* stylelint-disable-next-line */
+  border-radius: 0 !important;
+  border: 0;
 }
 
 .circle-arrow-carousel {
