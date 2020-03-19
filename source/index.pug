@@ -1,38 +1,174 @@
 extends modules/layout/_page-default
+include modules/_home-slider
+include modules/_product-slider
+include modules/_card-dv
 
 block head
   +head('Home')
 
 block main
-  .home-slider.js-home-slider
+  +homeSlider
+  .promotion-01
+    .container
+      .row.sd.align-items-center.justify-content-between
+        .content
+          p Kiến tạo 
+            br
+            | cuộc sống mới
+          .divider
+          a(href='#') KHÁM PHÁ NGAY
+            .icon-circle.ml-2
+              span.ic-next
+        .cover
+          img(src='https://picsum.photos/820/330?random=1', alt='demo')
+  .kmh.mb-30
+    .container
+      .row.sd.flex-wrap
+        .sd-header.px-3.sd-header-kmh.d-flex.justify-content-between.align-items-center
+          .left
+            img(src='images/ic-fire.png', alt='demo')
+            h2 KHUYẾN MÃI HOT
+          .right
+            a(href="#") Xem tất cả
+              .icon-circle.ml-2
+                span.ic-next
+        .sd-content
+          +productSlider
+  
+  .spnb.mb-30
+    .container
+      .row.sd.flex-wrap
+        .sd-header.px-3.d-flex.justify-content-between.align-items-center
+          h2 SẢN PHẨM NỔI BẬT
+          a(href="#") Xem tất cả
+            .icon-circle.ml-2
+              span.ic-next
+        .sd-content
+          +productSlider
+  
+  .spm.mb-30
+    .container
+      .row.sd.flex-wrap
+        .sd-header.px-3.d-flex.justify-content-between.align-items-center
+          h2 SẢN PHẨM MỚI
+          a(href="#") Xem tất cả
+            .icon-circle.ml-2
+              span.ic-next
+        .sd-content
+          +productSlider('new')
+  
+  .dvnb.mb-3
     .container
       .row
-        .slider-inner
-          .side-cat
-            a(href='#') Điện tử , điện lạnh
-            a(href='#') Nhà thông minh
-            a(href='#') Nhà thông minh
-            a(href='#') Dịch vụ quản lý
-            a(href='#') Dịch vụ nhân công
-            a(href='#') Dịch vụ viễn thông
-            a(href='#') Dịch vụ công nghệ thông tin
-          .side-slider
-            .js-home-carousel.owl-carousel.owl-theme
-              .item(data-color='#000')
-                img(src='https://picsum.photos/940/300?random=1', alt='demo')
-              .item(data-color='#00918e')
-                img(src='https://picsum.photos/940/300?random=2', alt='demo')
-              .item(data-color='#f78624')
-                img(src='https://picsum.photos/940/300?random=3', alt='demo')
-              .item(data-color='#132726')
-                img(src='https://picsum.photos/940/300?random=4', alt='demo')
-              .item(data-color='#737c7c')
-                img(src='https://picsum.photos/940/300?random=5', alt='demo')
-              .item(data-color='#aab6b6')
-                img(src='https://picsum.photos/940/300?random=6', alt='demo')
-            .slider_nav
-              button.js-home-slider-prev.circle-arrow-carousel.prev
-                span.ic-prev
-              button.js-home-slider-next.circle-arrow-carousel.next
-                span.ic-next
-              
+        .sd-header.d-flex.justify-content-between.align-items-center
+          h2 DỊCH VỤ NỔI BẬT
+          a(href="#") Xem tất cả
+            .icon-circle.ml-2
+              span.ic-next
+      .row
+        .row-inner
+          .row
+            -
+              var dvs = [
+                {
+                  cover: 'https://picsum.photos/270/200?random=1',
+                  title: 'Phần Mềm Quản Lý Bán Hàng Shop.ONE',
+                  content: 'Shop.ONE là phần mềm quản lý cửa hàng, bán hàng bằng mã vạch chuyên nghiệp do tập đoàn Viettel phát triển (được sử dụng thử miễn phí 10 ngày)...'
+                },
+                {
+                  cover: 'https://picsum.photos/270/200?random=2',
+                  title: 'PSTN - Điện Thoại Cố Định Viettel',
+                  content: 'PSTN là dịch vụ điện thoại cố định của Viettel giúp khách hàng có thể gọi nội hạt, gọi liên tỉnh và quốc tế truyền thống, gọi liên tỉnh và quốc tế VoIP...'
+                },
+                {
+                  cover: 'https://picsum.photos/270/200?random=3',
+                  title: 'Chữ Ký Số Viettel – Thủ Tục Nhanh Gọn, Tư Vấn Hỗ Trợ Tận Nơi',
+                  content: 'Chữ ký số Viettel là 1 dạng chữ ký điện tử. Thông tin của người gửi được mã hóa bằng cặp khóa riêng đính kèm theo văn bản nhằm bảo mật cho người nhận...'
+                },
+                {
+                  cover: 'https://picsum.photos/270/200?random=4',
+                  title: 'Hòa Mạng Trả Sau Viettel - Khuyến Mại Cực Lớn',
+                  content: 'Kể từ ngày 21/11/2018, Viettel bắt đầu triển khai các gói cước mới với ưu đãi cực khủng dành riêng cho các thuê bao trả sau trên toàn quốc.'
+                },
+              ]
+            each dv in dvs
+              .col-lg-3.col-md-6.mb-30
+                +cardDv(dv.cover, dv.title, dv.content)
+  
+  .home-banner
+    .container
+      .row
+        .row-inner
+          .row
+            .col-lg-6
+              a(href='#')
+                img(src='images/banner-01.jpg', alt='cover')
+            .col-lg-6
+              a(href='#')
+                img(src='images/banner-02.jpg', alt='cover')
+
+  .home-partner
+    .container
+      .row.justify-content-xl-between.partner.justify-content-center
+        a(href="#")
+          img(src='images/daikin.png', alt='demo')
+        a(href="#")
+          img(src='images/hik.png', alt='demo')
+        a(href="#")
+          img(src='images/samsung.png', alt='demo')
+        a(href="#")
+          img(src='images/lumi.png', alt='demo')
+        a(href="#")
+          img(src='images/panasonic.png', alt='demo')
+      
+      .row.justify-content-between.features
+        .item-feature
+          .icon
+            span.ic-support
+              span.path1
+              span.path2
+              span.path3
+          .content
+            span Hỗ trợ quý khách hàng 24/7 suốt thời gian sử dụng
+        .item-feature
+          .icon
+            span.ic-payment
+              span.path1
+              span.path2
+          .content
+            span Thanh toán linh hoạt qua tiền mặt, visa
+        .item-feature
+          .icon
+            span.ic-change
+              span.path1
+              span.path2
+          .content
+            span Đổi trả nhanh trong 7 ngày
+        .item-feature
+          .icon
+            span.ic-delivery
+              span.path1
+              span.path2
+              span.path3
+          .content
+            span Giao hàng hoả tốc trong 2 giờ
+
+  .home-cta
+    .container
+      .row.justify-content-center
+        .inner
+          .left
+            .icon
+              span.ic-email
+                span.path1
+                span.path2
+            .content  
+              strong Đăng ký nhận bản tin Viettel AIO
+              span Nhận các thông tin khuyến mãi siêu hấp dẫn
+          .right
+            form.form-subcrible
+              .input-group
+                input.form-control(type="text" placeholder="Địa chỉ email của bạn")
+                .input-group-append
+                  button.btn.btn-search.btn-color3(type="button") ĐĂNG KÝ
+

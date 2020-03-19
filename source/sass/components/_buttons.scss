@@ -11,3 +11,13 @@
 .btn-pill {
   border-radius: 20px;
 }
+
+.btn-color3 {
+  background-color: $color3;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: darken($color3, 10%);
+  }
+}

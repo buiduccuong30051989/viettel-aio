@@ -115,3 +115,57 @@ $icon-fonts: 'ic';
   margin-left: -1em;
   color: rgb(0, 145, 143);
 }
+
+.#{$icon-fonts}-star:before {
+  content: '\e912';
+}
+
+.#{$icon-fonts}-delivery .path1:before {
+  content: '\e913';
+  color: rgb(0, 145, 143);
+}
+
+.#{$icon-fonts}-delivery .path2:before {
+  content: '\e914';
+  margin-left: -1em;
+  color: rgb(247, 134, 36);
+}
+
+.#{$icon-fonts}-delivery .path3:before {
+  content: '\e915';
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.#{$icon-fonts}-tw .path1:before {
+  content: '\e916';
+  color: rgb(3, 169, 244);
+}
+
+.#{$icon-fonts}-tw .path2:before {
+  content: '\e917';
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.#{$icon-fonts}-ytb .path1:before {
+  content: '\e918';
+  color: rgb(255, 40, 40);
+}
+
+.#{$icon-fonts}-ytb .path2:before {
+  content: '\e919';
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.#{$icon-fonts}-fb .path1:before {
+  content: '\e91a';
+  color: rgb(2, 110, 206);
+}
+
+.#{$icon-fonts}-fb .path2:before {
+  content: '\e91b';
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}

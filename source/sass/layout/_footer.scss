@@ -1,3 +1,113 @@
 // ======================================================
 // Layout :: Footer
 // ======================================================
+
+.footer {
+  background-color: $white;
+
+  .row-inner {
+    width: 100%;
+    border-bottom: 1px solid #ededed;
+    padding: 50px 0;
+  }
+
+  h4 {
+    font-weight: 500;
+    line-height: 32px;
+    color: $black2;
+    font-size: 14px;
+  }
+
+  .links {
+    a {
+      line-height: 24px;
+      color: $black2;
+      transition: all .3s;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .social-links {
+    font-size: 36px;
+    margin-bottom: 100px;
+
+    a {
+      padding-left: 6px;
+      text-decoration: none;
+    }
+
+    @include breakpoint-down('desktop') {
+      margin-bottom: 15px;
+    }
+  }
+
+  .btn-upload {
+    height: 40px;
+    min-width: 177px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+
+    .ic-upload {
+      font-size: 24px;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-top: -1px;
+    }
+  }
+
+  .text-td {
+    color: $black2;
+
+    a {
+      font-size: 16px;
+      font-weight: 900;
+      color: $color3;
+    }
+  }
+
+  .copyright {
+    padding: 40px 0 54px;
+    width: 100%;
+
+    h4 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      line-height: 24px;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: $black2;
+      line-height: 24px;
+    }
+
+    .language {
+      margin-bottom: 20px;
+      justify-content: flex-end;
+
+      @include breakpoint-down('desktop') {
+        justify-content: flex-start;
+      }
+    }
+
+    .img-gov {
+      width: 145px;
+    }
+
+    .btn-language {
+      &:after {
+        border-top-color: $black1;
+      }
+    }
+
+    .text-copyright {
+      font-size: 12px;
+    }
+  }
+}

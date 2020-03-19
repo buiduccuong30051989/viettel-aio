@@ -1,0 +1,173 @@
+.card-product {
+  position: relative;
+  padding-bottom: 60px;
+
+  .cover {
+    position: relative;
+
+    img {
+      max-width: 100%;
+    }
+
+    .bag-sale,
+    .bag-new {
+      position: absolute;
+      top: 10px;
+      right: 13px;
+    }
+  }
+
+  .content {
+    padding: 15px 16px 10px;
+
+    h3 {
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    h3 a {
+      transition: all .3s;
+      color: $black1;
+
+      &:hover {
+        text-decoration: none;
+        color: $orange;
+      }
+    }
+
+    .product-price {
+      color: $orange;
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .product-price--old {
+      font-size: 12px;
+      color: $black2;
+      text-decoration: line-through;
+      margin-bottom: 0;
+    }
+  }
+
+  .rating-wrap {
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 0 16px;
+    font-size: 12px;
+    color: $black2;
+  }
+}
+
+.card-dv {
+  .cover {
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    padding: 22px 16px 28px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 20px;
+
+      a {
+        color: $color3;
+
+        &:hover {
+          color: $color1;
+          text-decoration: none;
+        }
+      }
+    }
+
+    p {
+      color: $black2;
+    }
+  }
+}
+
+.carousel-product.owl-carousel {
+  position: relative;
+  /* stylelint-disable */
+  .owl-stage {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+  }
+  /* stylelint-enable */
+
+  .owl-item {
+    border-right: 1px solid #ededed;
+    float: none;
+
+    .card-product,
+    .item {
+      height: 100%;
+    }
+  }
+
+  .owl-nav {
+    .owl-prev {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -25px;
+      width: 40px;
+      height: 50px;
+      border-radius: 0 16px 16px 0;
+      box-shadow: 2px 1px 8px 0 rgba(0, 0, 0, .16);
+      background: rgba(255, 255, 255, .2);
+      z-index: 3;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        background: $white;
+      }
+
+      span {
+        font-size: 18px;
+        display: block;
+        margin-top: -1px;
+        margin-left: -2px;
+        color: $black2;
+      }
+    }
+
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -25px;
+      width: 40px;
+      height: 50px;
+      border-radius: 16px 0 0 16px;
+      box-shadow: 2px 1px 8px 0 rgba(0, 0, 0, .16);
+      background: rgba(255, 255, 255, .2);
+      z-index: 3;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        background: $white;
+      }
+
+      span {
+        font-size: 18px;
+        display: block;
+        margin-top: -1px;
+        margin-right: -3px;
+        color: $black2;
+      }
+    }
+  }
+}

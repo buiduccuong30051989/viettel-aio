@@ -13,36 +13,6 @@
   .item {
     margin-left: 40px;
 
-    .btn-language {
-      background-color: transparent;
-      border: 0;
-
-      &:after {
-        border-top-color: $white;
-        margin-left: 10px;
-      }
-
-      img {
-        width: 24px;
-      }
-    }
-
-    .dropdown-item {
-      display: flex;
-      justify-content: space-between;
-      min-width: 200px;
-      padding: 10px 15px;
-
-      img {
-        width: 24px;
-      }
-    }
-
-    &.language {
-      display: flex;
-      align-items: center;
-    }
-
     &.upload {
       .btn-upload {
         min-width: 177px;
@@ -80,6 +50,41 @@
       &.upload {
         margin: 15px 0;
       }
+    }
+  }
+}
+
+.language {
+  display: flex;
+  align-items: center;
+
+  .dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+    padding: 10px 15px;
+
+    img {
+      width: 24px;
+    }
+  }
+
+  .btn-language {
+    background-color: transparent;
+    border: 0;
+
+    &:after {
+      border-top-color: $white;
+      margin-left: 10px;
+    }
+
+    img {
+      width: 24px;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
     }
   }
 }

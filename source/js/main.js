@@ -2,6 +2,7 @@ const ViettelAIO = {
   Init: function() {
     this.homeSlider()
     this.menu()
+    this.commonCarousel()
   },
 
   menu: function() {
@@ -24,14 +25,16 @@ const ViettelAIO = {
         $menu.has(e.target).length === 0
       ) {
         // ... nor a descendant of the container
-        $('.js-btn-menu-close').trigger('click');
+        $('.js-btn-menu-close').trigger('click')
       }
     })
   },
 
   homeSlider: function() {
     $('.js-home-carousel').on('initialized.owl.carousel', function(event) {
-      var $currentItem = $('.owl-item', $('.js-home-carousel')).eq(event.item.index)
+      var $currentItem = $('.owl-item', $('.js-home-carousel')).eq(
+        event.item.index
+      )
       const currentColor = $currentItem.find('.item').data('color')
       $('.js-home-slider').css('background-color', currentColor)
     })
@@ -46,17 +49,45 @@ const ViettelAIO = {
     })
 
     $('.js-home-slider-next').click(function() {
-      $('.js-home-carousel').trigger('next.owl.carousel');
+      $('.js-home-carousel').trigger('next.owl.carousel')
     })
 
     $('.js-home-slider-prev').click(function() {
-      $('.js-home-carousel').trigger('prev.owl.carousel');
+      $('.js-home-carousel').trigger('prev.owl.carousel')
     })
 
     $('.js-home-carousel').on('changed.owl.carousel', function(event) {
-      var $currentItem = $('.owl-item', $('.js-home-carousel')).eq(event.item.index)
+      var $currentItem = $('.owl-item', $('.js-home-carousel')).eq(
+        event.item.index
+      )
       const currentColor = $currentItem.find('.item').data('color')
       $('.js-home-slider').css('background-color', currentColor)
+    })
+  },
+
+  commonCarousel: function() {
+    $('.js-carousel-product').owlCarousel({
+      loop: true,
+      dots: false,
+      nav: true,
+      navText: [
+        '<span class="ic-prev" aria-hidden="true"></span>',
+        '<span class="ic-next" aria-hidden="true"></span>'
+      ],
+      responsive: {
+        0: {
+          items: 1
+        },
+        480: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        992: {
+          items: 4
+        }
+      }
     })
   }
 }
