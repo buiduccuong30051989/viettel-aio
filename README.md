@@ -1,4 +1,4 @@
-# ⚡️ { Tenant }
+# ⚡️ { VIETTEL AIO }
 
 { A brief description of your project... }
 
