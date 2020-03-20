@@ -47,6 +47,10 @@
       margin-right: auto;
       width: 400px;
     }
+
+    @include breakpoint-down('phone') {
+      width: 100%;
+    }
   }
 
   &-thumbs {
@@ -95,6 +99,10 @@
       margin-right: auto;
       width: 400px;
     }
+
+    @include breakpoint-down('phone') {
+      width: 100%;
+    }
   }
 
   &-share {
@@ -123,6 +131,10 @@
       margin-left: auto;
       margin-right: auto;
       width: 400px;
+    }
+
+    @include breakpoint-down('phone') {
+      width: 100%;
     }
   }
 
