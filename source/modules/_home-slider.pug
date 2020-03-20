@@ -1,16 +1,12 @@
+include _common
+
 mixin homeSlider
   .home-slider.js-home-slider
     .container
       .row
         .slider-inner
           .side-cat
-            a(href='#') Điện tử , điện lạnh
-            a(href='#') Nhà thông minh
-            a(href='#') Nhà thông minh
-            a(href='#') Dịch vụ quản lý
-            a(href='#') Dịch vụ nhân công
-            a(href='#') Dịch vụ viễn thông
-            a(href='#') Dịch vụ công nghệ thông tin
+            +catMenu
           .side-slider
             .js-home-carousel.owl-carousel.owl-theme
               .item(data-color='#000')

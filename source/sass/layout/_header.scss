@@ -93,8 +93,8 @@
   background-color: $color1;
 
   &.header-home {
-    .btn-menu {
-      display: none;
+    .dropdown {
+      pointer-events: none;
     }
   }
 
@@ -120,36 +120,36 @@
     }
 
     .dropdown-menu {
-      min-width: 260px;
+      min-width: 200px;
     }
 
-    .dropdown-item {
-      padding: 9px 12px;
-      color: $black2;
-      display: flex;
-      align-items: center;
+    // .dropdown-item {
+    //   padding: 9px 12px;
+    //   color: $black2;
+    //   display: flex;
+    //   align-items: center;
 
-      [class*='ic-'] {
-        font-size: 20px;
-        padding-right: 22px;
-      }
+    //   [class*='ic-'] {
+    //     font-size: 20px;
+    //     padding-right: 22px;
+    //   }
 
-      &:last-of-type {
-        padding-bottom: 20px;
-      }
+    //   &:last-of-type {
+    //     padding-bottom: 20px;
+    //   }
 
-      &:first-of-type {
-        padding-top: 20px;
-      }
+    //   &:first-of-type {
+    //     padding-top: 20px;
+    //   }
 
-      &:hover {
-        background-color: rgba(0, 145, 143, .08);
+    //   &:hover {
+    //     background-color: rgba(0, 145, 143, .08);
 
-        [class*='ic-'] {
-          color: $color3;
-        }
-      }
-    }
+    //     [class*='ic-'] {
+    //       color: $color3;
+    //     }
+    //   }
+    // }
 
     &:hover {
       .dropdown-menu {
@@ -424,5 +424,66 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba($black, .7);
+  }
+}
+
+.cat-menu {
+  margin: 0;
+  list-style: none;
+  padding: 30px 0;
+  height: 100%;
+  position: relative;
+  z-index: 9;
+
+  li {
+    &:not(:last-of-type) {
+      margin-bottom: 18px;
+    }
+
+    &:hover {
+      & > ul {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    color: $black1;
+    display: flex;
+    transition: all .3s;
+    padding: 0 12.5px;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+
+    .ic-next {
+      min-width: 14px;
+      font-size: 10px;
+      color: $black2;
+    }
+
+    &:hover {
+      color: $orange;
+      text-decoration: none;
+
+      .ic-next {
+        color: $orange;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 2px);
+    display: none;
+    width: 200px;
+    background-color: $white;
+    padding: 30px 0;
+    z-index: 9;
+    height: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25);
   }
 }

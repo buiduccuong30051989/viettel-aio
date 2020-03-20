@@ -11,22 +11,6 @@
   .side-cat {
     flex: 0 0 200px;
     background-color: $white;
-    padding: 30px 12.5px 0;
-
-    a {
-      color: $black1;
-      display: block;
-      transition: all .3s;
-
-      &:not(:last-of-type) {
-        margin-bottom: 18px;
-      }
-
-      &:hover {
-        color: $orange;
-        text-decoration: none;
-      }
-    }
   }
 
   .side-slider {
