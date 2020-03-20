@@ -4,7 +4,7 @@
 
 // Icon Fonts
 @font-face {
-  font-family: vtaio;
+  font-family: $font-family-icons;
   src:
     url('#{$path-fonts}/vtaio.ttf?owxd7s') format('truetype'),
     url('#{$path-fonts}/vtaio.woff?owxd7s') format('woff'),

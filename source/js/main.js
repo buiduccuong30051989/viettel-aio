@@ -3,6 +3,74 @@ const ViettelAIO = {
     this.homeSlider()
     this.menu()
     this.commonCarousel()
+    this.inputNumber()
+    this.featureImageProductDetail()
+  },
+
+  featureImageProductDetail: function() {
+    $('.js-product-detail-thumb').on('click', function() {
+      let mainImage = $(this).parents('.js-product-detail-feature-images').find('.js-product-detail-feature-image-main');
+      let url = $(this).attr('src')
+      mainImage.attr('src', url)
+    })
+  },
+
+  inputNumber: function() {
+    $('.js-btn-number').click(function(e) {
+      e.preventDefault()
+
+      var fieldName = $(this).attr('data-field')
+      var type = $(this).attr('data-type')
+      var input = $("input[name='" + fieldName + "']")
+      var currentVal = parseInt(input.val())
+      if (!isNaN(currentVal)) {
+        if (type == 'minus') {
+          if (currentVal > input.attr('min')) {
+            input.val(currentVal - 1).change()
+          }
+          if (parseInt(input.val()) == input.attr('min')) {
+            $(this).attr('disabled', true)
+          }
+        } else if (type == 'plus') {
+          if (currentVal < input.attr('max')) {
+            input.val(currentVal + 1).change()
+          }
+          if (parseInt(input.val()) == input.attr('max')) {
+            $(this).attr('disabled', true)
+          }
+        }
+      } else {
+        input.val(0)
+      }
+    })
+
+    $('.js-input-number').focusin(function() {
+      $(this).data('oldValue', $(this).val())
+    })
+
+    $('.js-input-number').change(function() {
+      var minValue = parseInt($(this).attr('min'))
+      var maxValue = parseInt($(this).attr('max'))
+      var valueCurrent = parseInt($(this).val())
+
+      var name = $(this).attr('name')
+      if (valueCurrent >= minValue) {
+        $(
+          ".js-btn-number[data-type='minus'][data-field='" + name + "']"
+        ).removeAttr('disabled')
+      } else {
+        alert('Sorry, the minimum value was reached')
+        $(this).val($(this).data('oldValue'))
+      }
+      if (valueCurrent <= maxValue) {
+        $(
+          ".js-btn-number[data-type='plus'][data-field='" + name + "']"
+        ).removeAttr('disabled')
+      } else {
+        alert('Sorry, the maximum value was reached')
+        $(this).val($(this).data('oldValue'))
+      }
+    })
   },
 
   menu: function() {

@@ -1,0 +1,25 @@
+
+.breadcrumb {
+  background-color: transparent;
+  padding-left: 0;
+
+  .breadcrumb-item.active {
+    color: $black1;
+  }
+
+  .breadcrumb-item + .breadcrumb-item:before {
+    content: '\e902';
+    font-family: $font-family-icons;
+    font-size: 8px;
+    color: $black2;
+  }
+
+  a {
+    color: $black2;
+
+    &:hover {
+      color: $orange;
+      text-decoration: none;
+    }
+  }
+}

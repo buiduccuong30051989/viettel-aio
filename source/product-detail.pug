@@ -1,5 +1,6 @@
 extends modules/layout/_page-default
 include modules/_product-slider
+include modules/_breadcrumb
 
 block head
   +head('Product Detail')
@@ -7,3 +8,108 @@ block header
   +header
 
 block main
+  .breadcrumb-wrap
+    .container
+      .row
+        +breadcrumb
+  .product-detail-page
+    .product-detail-page-inner
+      .container
+        .row
+          .product-detail-overview
+            .left.js-product-detail-feature-images
+              .product-detail-feature-image
+                img.js-product-detail-feature-image-main(src='https://picsum.photos/460?random=1', alt='demo')
+              .product-detail-thumbs
+                .item
+                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=1', alt='demo')
+                .item
+                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=2', alt='demo')
+                .item
+                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=3', alt='demo')
+                .item
+                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=4', alt='demo')
+                .item
+                  .overlay
+                    span Xem tất cả ảnh
+                  img(src='https://picsum.photos/460?random=5', alt='demo')
+              .product-detail-share
+                p.mb-0 Chia sẻ
+                  a(href='#')
+                    span.ic-fb.px-3
+                      span.path1
+                      span.path2
+                  a(href='#')
+                    span.ic-tw
+                      span.path1
+                      span.path2
+            .right
+              .product-detail-info
+                h2.title Máy lạnh z1.5 HP FTKQ35SAVMV
+                .rating-wrap
+                  .rating.pr-3
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star
+                  span (16 đánh giá)
+                p.product-detail-code Mã sản phẩm: 271209
+                .product-detail-price-wrap
+                  span.product-price 95.000.000đ
+                  span.product-price--old 105.676.300đ
+                  span.badge.badge-orange -10%
+                p.product-detail-brand Thương hiệu:
+                  a(href='#') Daikin
+                .s-divider
+                .product-detail-short-info
+                  .left
+                    ul
+                      li Loại máy: Điều hòa một chiều
+                      li Công nghệ: Inverter
+                      li Công suất: 12000 BTU
+                      li Cục nóng: 32kg, kích thước: 550 x 658 x 275 mm
+                      li Cục lạnh: 8kg, kích thước: 283 x 770 x 203 mm
+                  .right
+                    .feature-badges
+                      .icon
+                        span.ic-top-warranty
+                      .content
+                        span Cam kết hàng chính hãng 100%
+                    .feature-badges
+                      .icon
+                        span.ic-hsvg
+                          span.path1
+                          span.path2
+                      .content
+                        span Giao hàng hoả tốc trong 2h
+                .product-detail-km
+                  .badges-km KHUYẾN MÃI
+                  .item
+                    .icon
+                      span.ic-check-feature
+                        span.path1
+                        span.path2
+                    .content
+                      span Miễn phí vận chuyển
+                  .item
+                    .icon
+                      span.ic-check-feature
+                        span.path1
+                        span.path2
+                    .content
+                      span Tặng 1 bộ vệ sinh điều hoà cao cấp
+                .product-detail-footer-action
+                  .left
+                    span.pr-3 Số lượng
+                    .input-group.counter-form
+                      .input-group-prepend.js-btn-number(disabled='disabled', data-type='minus', data-field='quant[1]')
+                        span.input-group-text -
+                      input.form-control.js-input-number(type='text', name='quant[1]', value='1', min='1', max='10')
+                      .input-group-append.js-btn-number(data-type='plus', data-field='quant[1]')
+                        span.input-group-text +
+                  .right
+                    button.btn.btn-lg.btn-color3
+                      span.ic-cart
+                      | Thêm vào giỏ hàng
+                    button.btn.btn-lg.btn-orange Mua ngay
