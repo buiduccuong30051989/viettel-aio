@@ -62,7 +62,7 @@
 
 .sd-header-kmh {
   h2 {
-    color: $orange;
+    color: $orange2;
     font-size: 18px;
     margin: 0;
     font-weight: 500;
@@ -73,9 +73,10 @@
     align-items: center;
   }
 
-  img {
-    width: 30px;
-    margin-right: 15px;
+  .ic-fire {
+    font-size: 30px;
+    padding-right: 15px;
+    color: $orange2;
   }
 }
 
