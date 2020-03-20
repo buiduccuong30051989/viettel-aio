@@ -29,11 +29,13 @@ mixin header(type)
   .header(class=type)
     .container
       .row.justify-content-md-between.justify-content-center.align-items-center
-        .dropdown.dropdown-cat
+        .dropdown.dropdown-cat.d-none.d-xl-block
           button.btn-menu.dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
             span.ic-menu
           .dropdown-menu
-            +catMenu
+            +catMenu(catMenu)
+        a(href="#js-mobile-menu-btn").btn-menu.d-flex.d-xl-none.justify-content-center.align-items-center
+          span.ic-menu
         a(href='index.html')
           img.logo(src='images/logo.png', alt='logo')
         form.form-search
@@ -82,15 +84,5 @@ mixin header(type)
                 span.count 0
               .content
                 span Giỏ hàng của bạn
-  .menu.js-menu
-    button.btn-menu.js-btn-menu-close
-      span x
-    ul
-      li
-        a(href='#') Menu 01
-      li
-        a(href='#') Menu 02
-      li
-        a(href='#') Menu 03
-      li
-        a(href='#') Menu 04
+  nav#js-mobile-menu
+    +catMenu

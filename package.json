@@ -55,6 +55,7 @@
     "stylelint-scss": "^2.3.0"
   },
   "dependencies": {
+    "mmenu-light": "^3.0.3",
     "noto-sans-jp": "^24.0.0",
     "owl.carousel": "^2.3.4",
     "select2": "^4.0.12",

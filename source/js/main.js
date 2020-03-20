@@ -6,11 +6,37 @@ const ViettelAIO = {
     this.commonCarousel2()
     this.inputNumber()
     this.featureImageProductDetail()
+    this.mobileMenu()
+  },
+
+  mobileMenu: function() {
+    var menu = new MmenuLight(document.querySelector('#js-mobile-menu'), 'all') /* eslint-disable-line */
+
+    var navigator = menu.navigation({ /* eslint-disable-line */
+      // selectedClass: 'Selected',
+      // slidingSubmenus: true,
+      // theme: 'dark',
+      // title: 'Menu'
+    })
+
+    var drawer = menu.offcanvas({
+      // position: 'left'
+    })
+
+    //	Open the menu.
+    document
+      .querySelector('a[href="#js-mobile-menu-btn"]')
+      .addEventListener('click', evnt => {
+        evnt.preventDefault()
+        drawer.open()
+      })
   },
 
   featureImageProductDetail: function() {
     $('.js-product-detail-thumb').on('click', function() {
-      let mainImage = $(this).parents('.js-product-detail-feature-images').find('.js-product-detail-feature-image-main');
+      let mainImage = $(this)
+        .parents('.js-product-detail-feature-images')
+        .find('.js-product-detail-feature-image-main')
       let url = $(this).attr('src')
       mainImage.attr('src', url)
     })
