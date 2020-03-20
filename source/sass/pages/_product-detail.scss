@@ -368,3 +368,64 @@
     }
   }
 }
+
+.product-slider-2 {
+  overflow: hidden;
+}
+
+.product-detail-dg {
+  .box {
+    width: 100%;
+  }
+}
+
+.rating-overview {
+  width: 100%;
+  padding: 40px 30px;
+  box-shadow: 0 4px 8px 0 rgba(19, 39, 38, .08);
+  display: flex;
+
+  .left {
+    flex: 0 0 580px;
+    display: flex;
+  }
+
+  .rating-avg {
+    .title {
+      font-size: 16px;
+    }
+
+    .score {
+      font-size: 36px;
+      font-weight: 500;
+      color: $color3;
+    }
+
+    .rating {
+      font-size: 24px;
+      margin-bottom: 13px;
+
+      .ic-star {
+        padding-right: 5px;
+      }
+    }
+
+    .tdg {
+      font-size: 16px;
+      color: $black2;
+    }
+  }
+
+  .rating-detail {
+    flex-grow: 1;
+
+    .item {
+      display: flex;
+      width: 100%;
+
+      .progress {
+        flex-grow: 1;
+      }
+    }
+  }
+}

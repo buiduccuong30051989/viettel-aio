@@ -21,50 +21,96 @@ mixin product(cover, title, price, priceOld, type)
         span.ic-star.active
         span.ic-star.active
         span.ic-star
-      span (16 đánh giá) 
+      span (16 đánh giá)
 
 mixin productSlider(type)
   .sd-content
+    -
+      var items = [
+        {
+          cover: 'https://picsum.photos/290?random=1',
+          title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
+          price: '95.000.000đ',
+          priceOld: '105.676.300đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=2',
+          title: 'Camera quan sát DS-2CE56D0T-IRP',
+          price: '459.900đ ',
+          priceOld: '580.000đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=3',
+          title: 'Thiết bị định tuyến có thu phát vô tuyến hiệu TENDA model F3 băng...',
+          price: '320.000đ',
+          priceOld: '375.000đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=4',
+          title: 'Thiết bị phát Wifi Toto Link A800R',
+          price: '633.999đ',
+          priceOld: '800.000đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=5',
+          title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
+          price: '95.000.000đ',
+          priceOld: '105.676.300đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=6',
+          title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
+          price: '95.000.000đ',
+          priceOld: '105.676.300đ'
+        },
+      ]
     .js-carousel-product.owl-carousel.owl-theme.carousel-product
-      -
-        var items = [
-          {
-            cover: 'https://picsum.photos/290?random=1',
-            title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
-            price: '95.000.000đ',
-            priceOld: '105.676.300đ'
-          },
-          {
-            cover: 'https://picsum.photos/290?random=2',
-            title: 'Camera quan sát DS-2CE56D0T-IRP',
-            price: '459.900đ ',
-            priceOld: '580.000đ'
-          },
-          {
-            cover: 'https://picsum.photos/290?random=3',
-            title: 'Thiết bị định tuyến có thu phát vô tuyến hiệu TENDA model F3 băng...',
-            price: '320.000đ',
-            priceOld: '375.000đ'
-          },
-          {
-            cover: 'https://picsum.photos/290?random=4',
-            title: 'Thiết bị phát Wifi Toto Link A800R',
-            price: '633.999đ',
-            priceOld: '800.000đ'
-          },
-          {
-            cover: 'https://picsum.photos/290?random=5',
-            title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
-            price: '95.000.000đ',
-            priceOld: '105.676.300đ'
-          },
-          {
-            cover: 'https://picsum.photos/290?random=6',
-            title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
-            price: '95.000.000đ',
-            priceOld: '105.676.300đ'
-          },
-        ]
+      each item in items
+        .item
+          +product(item.cover, item.title, item.price,item.priceOld, type)
+
+mixin productSlider2
+  .product-slider-2
+    -
+      var items = [
+        {
+          cover: 'https://picsum.photos/290?random=1',
+          title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
+          price: '95.000.000đ',
+          priceOld: '105.676.300đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=2',
+          title: 'Camera quan sát DS-2CE56D0T-IRP',
+          price: '459.900đ ',
+          priceOld: '580.000đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=3',
+          title: 'Thiết bị định tuyến có thu phát vô tuyến hiệu TENDA model F3 băng...',
+          price: '320.000đ',
+          priceOld: '375.000đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=4',
+          title: 'Thiết bị phát Wifi Toto Link A800R',
+          price: '633.999đ',
+          priceOld: '800.000đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=5',
+          title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
+          price: '95.000.000đ',
+          priceOld: '105.676.300đ'
+        },
+        {
+          cover: 'https://picsum.photos/290?random=6',
+          title: 'Hệ Thống Điện Mặt Trời 5.04kWp',
+          price: '95.000.000đ',
+          priceOld: '105.676.300đ'
+        },
+      ]
+    .js-carousel-product-2.owl-carousel.owl-theme.carousel-product-2
       each item in items
         .item
           +product(item.cover, item.title, item.price,item.priceOld, type)

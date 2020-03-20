@@ -3,6 +3,7 @@ const ViettelAIO = {
     this.homeSlider()
     this.menu()
     this.commonCarousel()
+    this.commonCarousel2()
     this.inputNumber()
     this.featureImageProductDetail()
   },
@@ -137,6 +138,33 @@ const ViettelAIO = {
     $('.js-carousel-product').owlCarousel({
       loop: true,
       dots: false,
+      nav: true,
+      navText: [
+        '<span class="ic-prev" aria-hidden="true"></span>',
+        '<span class="ic-next" aria-hidden="true"></span>'
+      ],
+      responsive: {
+        0: {
+          items: 1
+        },
+        480: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        992: {
+          items: 4
+        }
+      }
+    })
+  },
+
+  commonCarousel2: function() {
+    $('.js-carousel-product-2').owlCarousel({
+      loop: true,
+      dots: false,
+      margin: 13,
       nav: true,
       navText: [
         '<span class="ic-prev" aria-hidden="true"></span>',

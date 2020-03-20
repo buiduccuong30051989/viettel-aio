@@ -1,6 +1,7 @@
 extends modules/layout/_page-default
 include modules/_product-slider
 include modules/_breadcrumb
+include modules/_common
 
 block head
   +head('Product Detail')
@@ -158,7 +159,7 @@ block main
                         span.icon.pr-2 +
                         span Thêm vào giỏ
 
-    .product-detail-info-wrap
+    .product-detail-info-wrap.mb-4
       .container
         .row
           .product-detail-information
@@ -205,3 +206,71 @@ block main
                 p Chế độ ngủ đêm - Tự điều chỉnh nhiệt độ phù hợp với thân nhiệt và môi trường.
                 p Chế độ hoạt động yên tĩnh mang lại những giây phút thư giãn tuyệt vời cho cả nhà.
                 img(src='https://picsum.photos/640/480?random=1', alt='demo')
+
+    .product-detail-relate.mb-30
+      .container
+        .row
+          .sd-header.d-flex.justify-content-between.align-items-center
+            h2 SẢN PHẨM LIÊN QUAN
+            a(href="#") Xem tất cả
+              .icon-circle.ml-2
+                span.ic-next
+        .row
+          +productSlider2
+
+    .product-detail-relate.mb-30
+      .container
+        .row
+          .sd-header.d-flex.justify-content-between.align-items-center
+            h2 SẢN PHẨM ĐÃ XEM
+            a(href="#") Xem tất cả
+              .icon-circle.ml-2
+                span.ic-next
+        .row
+          +productSlider2
+
+    .product-detail-dg
+      .container
+        .row
+          .sd-header.d-flex.justify-content-between.align-items-center
+            h2 ĐÁNH GIÁ VÀ NHẬN XÉT
+          .box.sd
+            .rating-overview
+              .left
+                .rating-avg
+                  p.title Đánh giá trung bình
+                  p.score 4/5
+                  .rating
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star
+                  p.tdg (16 đánh giá)
+                .rating-detail
+                  .item
+                    +rating
+                    .progress
+                      .progress-bar.bg-color3(role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
+                    span.value 50%
+                  .item
+                    +rating
+                    .progress
+                      .progress-bar.bg-color3(role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100")
+                    span.value 40%
+                  .item
+                    +rating
+                    .progress
+                      .progress-bar.bg-color3(role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100")
+                    span.value 30%
+                  .item
+                    +rating
+                    .progress
+                      .progress-bar.bg-color3(role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100")
+                    span.value 20%
+                  .item
+                    +rating
+                    .progress
+                      .progress-bar.bg-color3(role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
+                    span.value 10%
+              .right
