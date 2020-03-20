@@ -21,3 +21,11 @@
     background-color: darken($color3, 10%);
   }
 }
+
+.btn-outline-color3 {
+  background-color: rgba(0, 145, 143, .08);
+  color: $color3;
+  font-weight: 500;
+  height: 40px;
+  border: 1px solid $color3;
+}

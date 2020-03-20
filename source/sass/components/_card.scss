@@ -171,3 +171,63 @@
     }
   }
 }
+
+.item-dvmk {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .cover {
+    flex: 0 0 64px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    margin-right: 15px;
+    flex-grow: 1;
+
+    h4 {
+      font-weight: 500;
+      font-size: 16px;
+
+      a {
+        color: $black1;
+        text-decoration: none;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+
+    .price {
+      color: $orange;
+      font-size: 16px;
+    }
+  }
+
+  .action {
+    .btn {
+      min-width: 160px;
+    }
+  }
+
+  @include breakpoint-down('phone') {
+    flex-wrap: wrap;
+
+    .content {
+      max-width: calc(100% - 84px);
+      margin-right: 0;
+    }
+
+    .action {
+      .btn {
+        margin-top: 15px;
+      }
+    }
+  }
+}

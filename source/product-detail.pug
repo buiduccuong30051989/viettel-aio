@@ -9,15 +9,32 @@ block header
 
 block main
   .breadcrumb-wrap
-    .container
+    .container.sm
       .row
         +breadcrumb
   .product-detail-page
     .product-detail-page-inner
-      .container
+      .container.sm
         .row
           .product-detail-overview
             .left.js-product-detail-feature-images
+              .product-detail-info.pl-0.d-block.d-xl-none.mb-4
+                h2.title Máy lạnh z1.5 HP FTKQ35SAVMV
+                .rating-wrap
+                  .rating.pr-3
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star.active
+                    span.ic-star
+                  span (16 đánh giá)
+                p.product-detail-code Mã sản phẩm: 271209
+                .product-detail-price-wrap
+                  span.product-price 95.000.000đ
+                  span.product-price--old 105.676.300đ
+                  span.badge.badge-orange -10%
+                p.product-detail-brand Thương hiệu:
+                  a(href='#') Daikin
               .product-detail-feature-image
                 img.js-product-detail-feature-image-main(src='https://picsum.photos/460?random=1', alt='demo')
               .product-detail-thumbs
@@ -45,22 +62,23 @@ block main
                       span.path2
             .right
               .product-detail-info
-                h2.title Máy lạnh z1.5 HP FTKQ35SAVMV
-                .rating-wrap
-                  .rating.pr-3
-                    span.ic-star.active
-                    span.ic-star.active
-                    span.ic-star.active
-                    span.ic-star.active
-                    span.ic-star
-                  span (16 đánh giá)
-                p.product-detail-code Mã sản phẩm: 271209
-                .product-detail-price-wrap
-                  span.product-price 95.000.000đ
-                  span.product-price--old 105.676.300đ
-                  span.badge.badge-orange -10%
-                p.product-detail-brand Thương hiệu:
-                  a(href='#') Daikin
+                .d-none.d-xl-block
+                  h2.title Máy lạnh z1.5 HP FTKQ35SAVMV
+                  .rating-wrap
+                    .rating.pr-3
+                      span.ic-star.active
+                      span.ic-star.active
+                      span.ic-star.active
+                      span.ic-star.active
+                      span.ic-star
+                    span (16 đánh giá)
+                  p.product-detail-code Mã sản phẩm: 271209
+                  .product-detail-price-wrap
+                    span.product-price 95.000.000đ
+                    span.product-price--old 105.676.300đ
+                    span.badge.badge-orange -10%
+                  p.product-detail-brand Thương hiệu:
+                    a(href='#') Daikin
                 .s-divider
                 .product-detail-short-info
                   .left
@@ -113,3 +131,77 @@ block main
                       span.ic-cart
                       | Thêm vào giỏ hàng
                     button.btn.btn-lg.btn-orange Mua ngay
+                .s-divider
+                .product-detail-dvmk
+                  h3 DỊCH VỤ MUA KÈM
+                  .item-dvmk
+                    .cover
+                      img(src='https://picsum.photos/67?random=1', alt='demo')
+                    .content
+                      h4
+                        a(href='#') Dịch vụ bảo dưỡng điều hòa treo tường
+                      span.price 150.000 vnđ
+                    .action
+                      button.btn.btn-outline-color3
+                        span.icon.pr-2 +
+                        span Thêm vào giỏ
+                  .d-divider
+                  .item-dvmk
+                    .cover
+                      img(src='https://picsum.photos/67?random=2', alt='demo')
+                    .content
+                      h4
+                        a(href='#') Dịch vụ bảo dưỡng điều hòa treo tường 2 năm
+                      span.price 150.000 vnđ
+                    .action
+                      button.btn.btn-outline-color3
+                        span.icon.pr-2 +
+                        span Thêm vào giỏ
+
+    .product-detail-info-wrap
+      .container
+        .row
+          .product-detail-information
+            .box.sd
+              .title-02
+                h3 THÔNG TIN CHI TIẾT
+              table.product-detail-information-table
+                tr
+                  td
+                    strong Thương hiệu:
+                    span Daikin
+                tr
+                  td
+                    strong Loại máy:
+                    span Điều hòa một chiều
+                tr
+                  td
+                    strong Kiểu máy:
+                    span Treo tường
+                tr
+                  td
+                    strong Thương hiệu:
+                    span Daikin
+                tr
+                  td
+                    strong Loại máy:
+                    span Điều hòa một chiều
+                tr
+                  td
+                    strong Kiểu máy:
+                    span Treo tường
+                tr
+                  td
+                    strong Thông tin dàn nóng:
+                    span 550 x 658 x 275 mm
+
+              .title-02
+                h3 MÔ TẢ SẢN PHẨM
+              .content-sumary
+                p Công nghệ Inverter - tiết kiệm điện, vận hành êm, làm lạnh sâu và hơi lạnh lan tỏa đều.
+                p Công nghệ Nanoe-G - lọc không khí trong lành, sạch bụi bẩn.
+                p Cửa gió rộng Big Flap lên đến 79mm cho khả năng thổi gió xa hơn.
+                p Làm lạnh nhanh công suất cao Powerful.
+                p Chế độ ngủ đêm - Tự điều chỉnh nhiệt độ phù hợp với thân nhiệt và môi trường.
+                p Chế độ hoạt động yên tĩnh mang lại những giây phút thư giãn tuyệt vời cho cả nhà.
+                img(src='https://picsum.photos/640/480?random=1', alt='demo')

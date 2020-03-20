@@ -17,6 +17,20 @@
     & > .right {
       flex: 0 0 60%;
     }
+
+    @include breakpoint-down('desktop') {
+      flex-wrap: wrap;
+
+      & > .left {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+
+      & > .right {
+        flex: 0 0 100%;
+      }
+    }
   }
 
   &-feature-image {
@@ -26,6 +40,12 @@
 
     img {
       width: 100%;
+    }
+
+    @include breakpoint-down('desktop') {
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
     }
   }
 
@@ -69,6 +89,12 @@
         }
       }
     }
+
+    @include breakpoint-down('desktop') {
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+    }
   }
 
   &-share {
@@ -91,6 +117,12 @@
 
     [class*='ic-'] {
       font-size: 36px;
+    }
+
+    @include breakpoint-down('desktop') {
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
     }
   }
 
@@ -118,6 +150,10 @@
 
     .s-divider {
       margin-bottom: 20px;
+    }
+
+    @include breakpoint-down('desktop') {
+      padding-left: 0;
     }
   }
 
@@ -187,6 +223,21 @@
     .left {
       flex-grow: 1;
     }
+
+    @include breakpoint-down('desktop') {
+      flex-wrap: wrap;
+
+      .left {
+        width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 15px;
+      }
+
+      .right {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+    }
   }
 
   &-km {
@@ -219,6 +270,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 
     .left {
       display: flex;
@@ -239,6 +291,67 @@
       .ic-cart {
         font-size: 18px;
         padding-right: 8px;
+      }
+    }
+
+    @include breakpoint-down('desktop') {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+
+      .left {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .right {
+        width: 100%;
+
+        .btn {
+          margin-left: 0;
+          margin-right: 15px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &-dvmk {
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .d-divider {
+      margin: 13px 0;
+    }
+  }
+
+  &-information {
+    width: 100%;
+
+    .title-02 {
+      margin-bottom: 20px;
+    }
+
+    .box {
+      width: 100%;
+      padding: 44px 40px 65px;
+    }
+
+    .product-detail-information-table {
+      margin-bottom: 54px;
+    }
+
+    .content-sumary {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @include breakpoint-down('desktop') {
+      .box {
+        padding: 44px 15px;
       }
     }
   }
