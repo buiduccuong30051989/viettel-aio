@@ -210,7 +210,7 @@ block main
     .product-detail-relate.mb-30
       .container
         .row
-          .sd-header.d-flex.justify-content-between.align-items-center
+          .sd-header.d-flex.justify-content-between.align-items-center.border-bottom-0
             h2 SẢN PHẨM LIÊN QUAN
             a(href="#") Xem tất cả
               .icon-circle.ml-2
@@ -221,7 +221,7 @@ block main
     .product-detail-relate.mb-30
       .container
         .row
-          .sd-header.d-flex.justify-content-between.align-items-center
+          .sd-header.d-flex.justify-content-between.align-items-center.border-bottom-0
             h2 SẢN PHẨM ĐÃ XEM
             a(href="#") Xem tất cả
               .icon-circle.ml-2
@@ -232,7 +232,7 @@ block main
     .product-detail-dg
       .container
         .row
-          .sd-header.d-flex.justify-content-between.align-items-center
+          .sd-header.d-flex.justify-content-between.align-items-center.border-bottom-0
             h2 ĐÁNH GIÁ VÀ NHẬN XÉT
           .box.sd
             .rating-overview
@@ -246,7 +246,7 @@ block main
                     span.ic-star.active
                     span.ic-star.active
                     span.ic-star
-                  p.tdg (16 đánh giá)
+                  p.tdg.mb-0 (16 đánh giá)
                 .rating-detail
                   .item
                     +rating
@@ -273,4 +273,62 @@ block main
                     .progress
                       .progress-bar.bg-color3(role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
                     span.value 10%
-              .right
+              .right.pl-lg-4
+                .box-open-dg
+                  p Chia sẻ của bạn về sản phẩm
+                  button.btn.btn-orange Viết đánh giá
+            .rating-filter
+              p.title Đánh giá trung bình
+              .filters-rating
+                select.custom-select.common-select-01.mr-3
+                  option(selected="") Đánh giá mới nhất
+                  option(value="1") One
+                  option(value="2") Two
+                  option(value="3") Three
+                select.custom-select.common-select-01
+                  option(selected="") Tất cả sao
+                  option(value="1") One
+                  option(value="2") Two
+                  option(value="3") Three
+            .list-dg
+              .item-dg
+                .cover
+                  .thumb
+                    img(src='https://picsum.photos/50?random=1', alt='demo')
+                  .meta
+                    h5.name Lê Văn Anh
+                    span.time 1 ngày trước
+                .content-wrap
+                  .rating-line
+                    +rating
+                    .cn
+                      span.ic-safety
+                      span Chứng nhận đã mua hàng
+                  h4.title Hài Lòng Và Sẽ Mua Thêm 1 Cái Nữa Lắp Cho Phòng Của Mẹ Mình
+                  .content
+                    p Giao hàng và lắp đặt nhanh chóng, nhân viên Viettel rất nhiệt tình
+                  .count-thank
+                    span.ic-hand-like
+                    span 0 cảm ơn
+              .item-dg
+                .cover
+                  .thumb
+                    img(src='https://picsum.photos/50?random=2', alt='demo')
+                  .meta
+                    h5.name Lê Văn Anh
+                    span.time 1 ngày trước
+                .content-wrap
+                  .rating-line
+                    +rating
+                    .cn
+                      span.ic-safety
+                      span Chứng nhận đã mua hàng
+                  h4.title Hài Lòng Và Sẽ Mua Thêm 1 Cái Nữa Lắp Cho Phòng Của Mẹ Mình
+                  .content
+                    p Giao hàng và lắp đặt nhanh chóng, nhân viên Viettel rất nhiệt tình
+                    .content-images
+                      img(src='https://picsum.photos/100?random=1', alt='demo')
+                      img(src='https://picsum.photos/100?random=2', alt='demo')
+                  .count-thank
+                    span.ic-hand-like.active
+                    span 2 cảm ơn

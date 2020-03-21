@@ -1,0 +1,27 @@
+.box-open-dg {
+  border: 2px dashed #ffdfc3;
+  border-radius: 8px;
+  background-color: #fff8f3;
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.common-select-01 {
+  border: 1px solid #d1d4d4;
+  height: 30px;
+  color: $black1;
+  font-size: 14px;
+  padding: 0 10px;
+  background-color: $white;
+  border-radius: 0;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: $orange;
+  }
+}
