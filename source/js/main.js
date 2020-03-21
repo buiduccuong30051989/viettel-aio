@@ -7,6 +7,16 @@ const ViettelAIO = {
     this.inputNumber()
     this.featureImageProductDetail()
     this.mobileMenu()
+    this.mobileHeader()
+  },
+
+  mobileHeader: function() {
+    let documentWidth = $(document).width();
+    if (documentWidth < 768) {
+      $('body').addClass('header-mobile')
+      let headerHeight = $('.js-header').outerHeight()
+      $('body').css('padding-top', headerHeight)
+    }
   },
 
   mobileMenu: function() {
@@ -216,4 +226,8 @@ const ViettelAIO = {
 
 $(document).ready(function() {
   ViettelAIO.Init()
+})
+
+$(window).on('resize', function() {
+  ViettelAIO.mobileHeader();
 })

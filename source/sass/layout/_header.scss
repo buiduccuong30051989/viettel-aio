@@ -19,6 +19,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 32px;
+        padding: 4px 10px;
       }
 
       .ic-upload {
@@ -40,6 +42,8 @@
   }
 
   @include breakpoint-down('phone') {
+    display: none;
+
     .row {
       height: auto;
     }
@@ -89,11 +93,21 @@
   }
 }
 
+.header-mobile {
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+}
+
 .header {
   background-color: $color1;
 
   &.header-home {
-    .dropdown {
+    .dropdown-cat {
       pointer-events: none;
     }
   }
@@ -218,6 +232,11 @@
       color: $white;
       align-items: center;
 
+      .content {
+        width: 58px;
+        font-size: 12px;
+      }
+
       .icon {
         border-radius: 50%;
         border: 1px solid rgba($white, .2);
@@ -243,11 +262,6 @@
         }
       }
 
-      .content {
-        width: 58px;
-        font-size: 12px;
-      }
-
       &:hover {
         cursor: pointer;
 
@@ -256,66 +270,84 @@
           border-color: $orange;
         }
       }
+    }
+  }
 
-      &.dropdown {
-        .dropdown-toggle {
-          display: flex;
-          align-items: center;
+  .dropdown.user {
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
 
-          .content {
-            white-space: normal;
-          }
+      .content {
+        white-space: normal;
+      }
 
-          &:after {
-            display: none;
-          }
+      &:after {
+        display: none;
+      }
 
-          &[aria-expanded='true'] {
-            .icon {
-              background-color: $orange;
-              border-color: $orange;
-            }
-          }
-        }
-
-        .dropdown-menu {
-          min-width: 260px;
-        }
-
-        .dropdown-item--user {
-          padding: 9px 12px;
-          color: $black2;
-          display: flex;
-          align-items: center;
-
-          [class*='ic-'] {
-            font-size: 20px;
-            padding-right: 22px;
-          }
-
-          &:last-of-type {
-            padding-bottom: 20px;
-          }
-
-          &:first-of-type {
-            padding-top: 20px;
-          }
-
-          &:hover {
-            background-color: rgba(0, 145, 143, .08);
-
-            [class*='ic-'] {
-              color: $color3;
-            }
-          }
-        }
-
-        &:hover {
-          .dropdown-menu {
-            display: block;
-          }
+      &[aria-expanded='true'] {
+        .icon {
+          background-color: $orange;
+          border-color: $orange;
         }
       }
+    }
+
+    .dropdown-menu {
+      min-width: 260px;
+    }
+
+    .dropdown-item--user {
+      padding: 9px 12px;
+      color: $black2;
+      display: flex;
+      align-items: center;
+
+      [class*='ic-'] {
+        font-size: 20px;
+        padding-right: 22px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 20px;
+      }
+
+      &:first-of-type {
+        padding-top: 20px;
+      }
+
+      &:hover {
+        background-color: rgba(0, 145, 143, .08);
+
+        [class*='ic-'] {
+          color: $color3;
+        }
+      }
+    }
+
+    &:hover {
+      .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+
+  .icon-cart-mobile {
+    position: relative;
+
+    .count {
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      width: 16px;
+      height: 16px;
+      background-color: $orange;
+      color: $white;
+      font-size: 12px;
+      border-radius: 50%;
+      line-height: 16px;
+      text-align: center;
     }
   }
 
@@ -335,15 +367,49 @@
 
   @include breakpoint-down('phone') {
     justify-content: center;
+    padding: 6px 0;
 
     .form-search {
-      margin-top: 30px;
+      margin-top: 0;
       min-width: 100%;
-      padding: 0 15px;
+      padding: 0;
+
+      .form-control-lg {
+        height: 40px;
+      }
+
+      .btn-search {
+        height: 40px;
+        line-height: 26px;
+      }
     }
 
-    .logo {
-      margin: 0 30px;
+    .user-info {
+      display: none;
+    }
+
+    .logo-wrap {
+      margin-right: auto;
+      padding-left: 30px;
+
+      img {
+        max-width: 112px;
+      }
+    }
+
+    .header-mobile-action {
+      color: $white;
+      display: flex;
+      font-size: 24px;
+
+      .dropdown.user {
+        margin-right: 15px;
+      }
+
+      .dropdown.user .dropdown-toggle[aria-expanded='true'] .icon {
+        color: $orange;
+        background-color: transparent;
+      }
     }
   }
 

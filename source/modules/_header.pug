@@ -26,9 +26,9 @@ mixin header(type)
           button.btn.btn-orange.btn-upload.btn-sm.btn-pill
             span.pr-2.ic-upload
             | Đề xuất sản phẩm
-  .header(class=type)
-    .container
-      .row.justify-content-md-between.justify-content-center.align-items-center
+  .js-header.header(class=type)
+    .container.sm
+      .row.justify-content-between.align-items-center
         .dropdown.dropdown-cat.d-none.d-xl-block
           button.btn-menu.dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
             span.ic-menu
@@ -36,8 +36,32 @@ mixin header(type)
             +catMenu('cat-menu')
         a(href="#js-mobile-menu-btn").btn-menu.d-flex.d-xl-none.justify-content-center.align-items-center
           span.ic-menu
-        a(href='index.html')
+        a.logo-wrap(href='index.html')
           img.logo(src='images/logo.png', alt='logo')
+        .header-mobile-action.d-flex.d-md-none
+          .dropdown.user
+            .dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+              .icon
+                span.ic-account
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item.dropdown-item--user(href="#")
+                span.ic-account
+                span Thông tin tài khoản 
+              a.dropdown-item.dropdown-item--user(href="#")
+                span.ic-notifications
+                span Thông báo của tôi
+              a.dropdown-item.dropdown-item--user(href="#")
+                span.ic-mycart
+                span Đơn hàng của tôi
+              a.dropdown-item.dropdown-item--user(href="#")
+                span.ic-h-payment
+                span Thông tin thanh toán
+              a.dropdown-item.dropdown-item--user(href="#")
+                span.ic-view
+                span Sản phẩm đã xem
+          .icon-cart-mobile
+            span.ic-cart
+            span.count 0
         form.form-search
           .input-group
             input.form-control.form-control-lg(type="text" placeholder="Tìm kiếm sản phẩm, dịch vụ,...")
@@ -56,7 +80,7 @@ mixin header(type)
                 span.ic-notifications
               .content
                 span Thông báo của bạn
-            .item.dropdown
+            .item.dropdown.user
               .dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                 .icon
                   span.ic-account

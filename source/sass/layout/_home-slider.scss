@@ -79,4 +79,10 @@
       width: 100%;
     }
   }
+
+  @include breakpoint-down('desktop') {
+    .side-cat {
+      display: none;
+    }
+  }
 }
