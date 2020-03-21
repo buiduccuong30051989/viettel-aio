@@ -1,5 +1,7 @@
 # ⚡️ { VIETTEL AIO }
 
+# 🕐 { Time Develoment: 32 hours }
+
 { A brief description of your project... }
 
 ## 🛠 Installation
