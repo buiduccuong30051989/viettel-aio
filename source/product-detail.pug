@@ -160,7 +160,7 @@ block main
                         span Thêm vào giỏ
 
     .product-detail-info-wrap.mb-4
-      .container
+      .container.sm
         .row
           .product-detail-information
             .box.sd
@@ -208,7 +208,7 @@ block main
                 img(src='https://picsum.photos/640/480?random=1', alt='demo')
 
     .product-detail-relate.mb-30
-      .container
+      .container.sm
         .row
           .sd-header.d-flex.justify-content-between.align-items-center.border-bottom-0
             h2 SẢN PHẨM LIÊN QUAN
@@ -219,7 +219,7 @@ block main
           +productSlider2
 
     .product-detail-relate.mb-30
-      .container
+      .container.sm
         .row
           .sd-header.d-flex.justify-content-between.align-items-center.border-bottom-0
             h2 SẢN PHẨM ĐÃ XEM
@@ -230,7 +230,7 @@ block main
           +productSlider2
 
     .product-detail-dg
-      .container
+      .container.sm
         .row
           .sd-header.d-flex.justify-content-between.align-items-center.border-bottom-0
             h2 ĐÁNH GIÁ VÀ NHẬN XÉT
@@ -327,8 +327,37 @@ block main
                   .content
                     p Giao hàng và lắp đặt nhanh chóng, nhân viên Viettel rất nhiệt tình
                     .content-images
-                      img(src='https://picsum.photos/100?random=1', alt='demo')
-                      img(src='https://picsum.photos/100?random=2', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=1', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=2', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=1', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=2', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=1', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=2', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=1', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=2', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=1', alt='demo')
+                      .item
+                        img(src='https://picsum.photos/100?random=2', alt='demo')
                   .count-thank
                     span.ic-hand-like.active
                     span 2 cảm ơn
+            .thanking-vt
+              .thanking-vt-inner
+                h3 Viettel All in One
+                span Chào bạn, Viettel All in One xin cảm ơn bạn đã chia sẻ những cảm nhận tuyệt vời về sản phẩm. Chúng tôi sẽ liên tục cập nhật những sản phẩm tốt để đem lại cho bạn những trải nghiệm tốt nhất. Hi vọng bạn sẽ đồng hành cùng Viettel All in One. Thân!
+            .pagination-wrap
+              +pagination
+
+    .sub-footer
+      .container.sm
+        +featuresSubFooter
+    +homeCta

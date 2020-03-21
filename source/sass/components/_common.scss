@@ -15,7 +15,9 @@
   height: 30px;
   color: $black1;
   font-size: 14px;
-  padding: 0 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
   background-color: $white;
   border-radius: 0;
 
@@ -25,3 +27,74 @@
     border-color: $orange;
   }
 }
+
+.cn {
+  color: $green;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 18px;
+
+  .ic-safety {
+    padding-right: 5px;
+    font-size: 16px;
+    margin-top: -1px;
+  }
+}
+
+
+.pagination {
+  margin: 0;
+
+  .page-item {
+    .page-link {
+      width: 30px;
+      height: 30px;
+      font-weight: 500;
+      background-color: #ededed;
+      border-radius: 50%;
+      margin: 0 4px;
+      color: $black2;
+      font-size: 14px;
+      text-align: center;
+      line-height: 28px;
+      padding: 0;
+      border-color: #ededed;
+
+      .ic-next,
+      .ic-prev {
+        color: $color3;
+        font-size: 11px;
+      }
+    }
+
+    &:last-of-type,
+    &:first-of-type {
+      .page-link {
+        background-color: transparent;
+        border: 1px solid #ededed;
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: $color3;
+        color: $white;
+      }
+    }
+
+    &:hover {
+      .page-link {
+        background-color: $color3;
+        border-color: $color3;
+        color: $white;
+
+        .ic-next,
+        .ic-prev {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+

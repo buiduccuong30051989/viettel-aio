@@ -374,8 +374,14 @@
 }
 
 .product-detail-dg {
+  margin-bottom: 100px;
+
   .box {
     width: 100%;
+  }
+
+  @include breakpoint-down('desktop') {
+    margin-bottom: 30px;
   }
 }
 
@@ -462,6 +468,39 @@
       min-width: 200px;
     }
   }
+
+  @include breakpoint-down('desktop') {
+    flex-wrap: wrap;
+
+    .left {
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+    }
+
+    .right {
+      flex: 0 0 100%;
+      justify-content: center;
+    }
+  }
+
+  @include breakpoint-down('smallphone') {
+    .left {
+      flex-wrap: wrap;
+
+      .rating-avg {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      .rating-detail {
+        width: 100%;
+
+        .item .progress {
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }
 
 .rating-filter {
@@ -484,4 +523,55 @@
     min-width: 200px;
     max-width: 200px;
   }
+
+  @include breakpoint-down('phone') {
+    .common-select-01 {
+      min-width: 0;
+      max-width: 200px;
+    }
+  }
+}
+
+.list-dg {
+  padding: 12px 30px 32px;
+
+  .item-dg {
+    padding-bottom: 15px;
+    padding-top: 20px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #ededed;
+    }
+  }
+}
+
+.thanking-vt {
+  padding: 0 30px 45px 190px;
+  border-bottom: 1px solid #ededed;
+
+  &-inner {
+    background-color: #edf7f7;
+    line-height: 19px;
+    padding: 20px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color3;
+    }
+  }
+
+  @include breakpoint-down('phone') {
+    padding-left: 30px;
+  }
+}
+
+.pagination-wrap {
+  padding: 14px 30px 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sub-footer {
+  background-color: $white;
 }

@@ -124,54 +124,6 @@ block main
         a(href="#")
           img(src='images/panasonic.png', alt='demo')
 
-      .row.justify-content-between.features
-        .item-feature
-          .icon
-            span.ic-support
-              span.path1
-              span.path2
-              span.path3
-          .content
-            span Hỗ trợ quý khách hàng 24/7 suốt thời gian sử dụng
-        .item-feature
-          .icon
-            span.ic-payment
-              span.path1
-              span.path2
-          .content
-            span Thanh toán linh hoạt qua tiền mặt, visa
-        .item-feature
-          .icon
-            span.ic-change
-              span.path1
-              span.path2
-          .content
-            span Đổi trả nhanh trong 7 ngày
-        .item-feature
-          .icon
-            span.ic-delivery
-              span.path1
-              span.path2
-              span.path3
-          .content
-            span Giao hàng hoả tốc trong 2 giờ
+      +featuresSubFooter
 
-  .home-cta
-    .container.sm
-      .row.justify-content-center
-        .inner
-          .left
-            .icon
-              span.ic-email
-                span.path1
-                span.path2
-            .content  
-              strong Đăng ký nhận bản tin Viettel AIO
-              span Nhận các thông tin khuyến mãi siêu hấp dẫn
-          .right
-            form.form-subcrible
-              .input-group
-                input.form-control(type="text" placeholder="Địa chỉ email của bạn")
-                .input-group-append
-                  button.btn.btn-search.btn-color3(type="button") ĐĂNG KÝ
-
+  +homeCta

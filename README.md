@@ -1,6 +1,6 @@
 # ⚡️ { VIETTEL AIO }
 
-# 🕐 Time Develoment: 34 hours
+# 🕐 Time Develoment: 36 hours
 
 { A brief description of your project... }
 

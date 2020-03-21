@@ -130,27 +130,27 @@
       padding-bottom: 10px;
     }
   }
+}
 
-  .features {
-    padding: 46px 0 54px;
+.features {
+  padding: 46px 0 54px;
+
+  .item-feature {
+    width: calc((100% - 115px) / 4);
+  }
+
+  @include breakpoint-down('desktop') {
+    padding-bottom: 24px;
 
     .item-feature {
-      width: calc((100% - 115px) / 4);
+      width: calc((100% - 115px) / 2);
+      margin-bottom: 30px;
     }
+  }
 
-    @include breakpoint-down('desktop') {
-      padding-bottom: 24px;
-
-      .item-feature {
-        width: calc((100% - 115px) / 2);
-        margin-bottom: 30px;
-      }
-    }
-
-    @include breakpoint-down('phone') {
-      .item-feature {
-        width: 100%;
-      }
+  @include breakpoint-down('phone') {
+    .item-feature {
+      width: 100%;
     }
   }
 }
