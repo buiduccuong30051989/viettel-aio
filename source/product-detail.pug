@@ -274,7 +274,7 @@ block main
                       .progress-bar.bg-color3(role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
                     span.value 10%
               .right.pl-lg-4
-                .box-open-dg
+                .box-open-dg(type="button" data-toggle="modal" data-target=".modal-dg")
                   p Chia sẻ của bạn về sản phẩm
                   button.btn.btn-orange Viết đánh giá
             .rating-filter
@@ -291,6 +291,11 @@ block main
                   option(value="2") Two
                   option(value="3") Three
             .list-dg
+              .no-dg
+                .inner
+                  span.ic-empty-rate
+                  p.mb-0 Hiện chưa có nhận xét nào cho sản phẩm.
+                  p.mb-0 Hãy trở thành người đầu tiên nhận xét sản phẩm này
               .item-dg
                 .cover
                   .thumb
@@ -361,3 +366,45 @@ block main
       .container.sm
         +featuresSubFooter
     +homeCta
+  .modal.fade.modal-dg(tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-lg.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h5.modal-title ĐÁNH GIÁ SẢN PHẨM
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") ×
+        .modal-body
+          .product-info
+            .cover
+              img(src='images/img-sp.png', alt='demo')
+            .content
+              h3.title Máy lạnh z1.5 HP FTKQ35SAVMV
+              span.brand Thương hiệu:
+                a(href='#') Daikin
+          .product-dg
+            .rating-wrap
+              span.pr-3 Đánh giá về sản phẩm
+              +rating
+            .form-group
+              label(for="td") Tiêu đề
+              input#td.form-control(type="text", placeholder="Nhập tiêu đề đánh giá (không bắt buộc)")
+            .form-group.nd
+              label(for="nd") Nội dung nhận xét
+              textarea#nd.form-control(rows="5")
+            .upload-images-wrap
+              .upload-image-action
+                span.pr-3 Thêm ảnh (tối đa 5 ảnh)
+                button.btn.btn-orange.btn-sm Thêm ảnh
+              .upload-images
+                .image-wrap
+                  img(src='https://picsum.photos/80?random=1', alt='demo')
+                  button.delete-img
+                    span ×
+                .image-wrap
+                  img(src='https://picsum.photos/80?random=2', alt='demo')
+                  button.delete-img
+                    span ×
+        .modal-footer
+          i Lưu ý: Xem tiêu chí xét duyệt đánh giá của Viettel AIO 
+            a(href='#') tại đây
+          button.btn.btn-color3(type="button" data-dismiss="modal") Gửi đánh giá
