@@ -11,12 +11,8 @@ const ViettelAIO = {
   },
 
   mobileHeader: function() {
-    let documentWidth = $(document).width();
-    if (documentWidth < 768) {
-      $('body').addClass('header-mobile')
-      let headerHeight = $('.js-header').outerHeight()
-      $('body').css('padding-top', headerHeight)
-    }
+    let headerHeight = $('.js-header-wrap').outerHeight()
+    $('body').css('padding-top', headerHeight)
   },
 
   mobileMenu: function() {
@@ -226,6 +222,7 @@ const ViettelAIO = {
 
 $(document).ready(function() {
   ViettelAIO.Init()
+  $('#js-mobile-menu').removeClass('d-none');
 })
 
 $(window).on('resize', function() {
