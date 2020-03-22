@@ -11,6 +11,10 @@
       {
         "title": "Product Detail",
         "url": "product-detail"
+      },
+      {
+        "title": "Product Detail TH1",
+        "url": "product-detail-th-1"
       }
     ]
   }
