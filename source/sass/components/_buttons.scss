@@ -34,3 +34,21 @@
   height: 40px;
   border: 1px solid $color3;
 }
+
+.btn-outline-white {
+  background-color: $white;
+  border-color: #d1d4d4;
+  color: $black1;
+  border-radius: 0;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.btn-grey {
+  background-color: #ededed;
+  color: $black1;
+
+  &:hover {
+    background-color: darken(#ededed, 10%);
+  }
+}

@@ -1,7 +1,7 @@
 const ViettelAIO = {
   Init: function() {
     this.homeSlider()
-    this.menu()
+    // this.menu()
     this.commonCarousel()
     this.commonCarousel2()
     this.inputNumber()
@@ -16,26 +16,32 @@ const ViettelAIO = {
   },
 
   mobileMenu: function() {
-    var menu = new MmenuLight(document.querySelector('#js-mobile-menu'), 'all') /* eslint-disable-line */
+    var selection = document.querySelector('#js-mobile-menu') !== null;
+    if (selection) {
+      var menu = new MmenuLight( /* eslint-disable-line */
+        document.querySelector('#js-mobile-menu'),
+        'all'
+      )
 
-    var navigator = menu.navigation({ /* eslint-disable-line */
-      // selectedClass: 'Selected',
-      // slidingSubmenus: true,
-      // theme: 'dark',
-      // title: 'Menu'
-    })
-
-    var drawer = menu.offcanvas({
-      // position: 'left'
-    })
-
-    //	Open the menu.
-    document
-      .querySelector('a[href="#js-mobile-menu-btn"]')
-      .addEventListener('click', evnt => {
-        evnt.preventDefault()
-        drawer.open()
+      var navigator = menu.navigation({ /* eslint-disable-line */
+        // selectedClass: 'Selected',
+        // slidingSubmenus: true,
+        // theme: 'dark',
+        // title: 'Menu'
       })
+
+      var drawer = menu.offcanvas({
+        // position: 'left'
+      })
+
+      //	Open the menu.
+      document
+        .querySelector('a[href="#js-mobile-menu-btn"]')
+        .addEventListener('click', evnt => {
+          evnt.preventDefault()
+          drawer.open()
+        })
+    }
   },
 
   featureImageProductDetail: function() {
@@ -54,7 +60,10 @@ const ViettelAIO = {
 
       var fieldName = $(this).attr('data-field')
       var type = $(this).attr('data-type')
-      var input = $("input[name='" + fieldName + "']")
+      var input = $(this)
+        .parent()
+        .find("input[name='" + fieldName + "']")
+
       var currentVal = parseInt(input.val())
       if (!isNaN(currentVal)) {
         if (type == 'minus') {
@@ -106,30 +115,30 @@ const ViettelAIO = {
     })
   },
 
-  menu: function() {
-    $('.js-btn-menu').on('click', function() {
-      $(this).toggleClass('active')
-      if ($('body').hasClass('menu-is-open'))
-        $('body').removeClass('menu-is-open')
-      else $('body').addClass('menu-is-open')
-    })
+  // menu: function() {
+  //   $('.js-btn-menu').on('click', function() {
+  //     $(this).toggleClass('active')
+  //     if ($('body').hasClass('menu-is-open'))
+  //       $('body').removeClass('menu-is-open')
+  //     else $('body').addClass('menu-is-open')
+  //   })
 
-    $('.js-btn-menu-close').on('click', function() {
-      $('body').removeClass('menu-is-open')
-      $('.js-btn-menu').removeClass('active')
-    })
+  //   $('.js-btn-menu-close').on('click', function() {
+  //     $('body').removeClass('menu-is-open')
+  //     $('.js-btn-menu').removeClass('active')
+  //   })
 
-    const $menu = $('.js-menu')
-    $(document).mouseup(e => {
-      if (
-        !$menu.is(e.target) && // if the target of the click isn't the container...
-        $menu.has(e.target).length === 0
-      ) {
-        // ... nor a descendant of the container
-        $('.js-btn-menu-close').trigger('click')
-      }
-    })
-  },
+  //   const $menu = $('.js-menu')
+  //   $(document).mouseup(e => {
+  //     if (
+  //       !$menu.is(e.target) && // if the target of the click isn't the container...
+  //       $menu.has(e.target).length === 0
+  //     ) {
+  //       // ... nor a descendant of the container
+  //       $('.js-btn-menu-close').trigger('click')
+  //     }
+  //   })
+  // },
 
   homeSlider: function() {
     $('.js-home-carousel').on('initialized.owl.carousel', function(event) {
@@ -222,9 +231,9 @@ const ViettelAIO = {
 
 $(document).ready(function() {
   ViettelAIO.Init()
-  $('#js-mobile-menu').removeClass('d-none');
+  $('#js-mobile-menu').removeClass('d-none')
 })
 
 $(window).on('resize', function() {
-  ViettelAIO.mobileHeader();
+  ViettelAIO.mobileHeader()
 })

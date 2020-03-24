@@ -557,3 +557,44 @@
     display: none;
   }
 }
+
+.header-cart {
+  background-color: $color3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  .row {
+    padding: 30px 0;
+  }
+
+  .logo {
+    max-width: 177px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  p {
+    color: $white;
+
+    strong {
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint-down('phone') {
+    padding: 0 15px;
+
+    .logo {
+      max-width: 120px;
+    }
+
+    .row {
+      padding: 15px 0;
+    }
+  }
+}

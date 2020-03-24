@@ -1,0 +1,286 @@
+.step-wrap {
+  background-color: $white;
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    padding: 16px 0;
+    margin: 0 15px;
+  }
+
+  .item {
+    text-align: center;
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ededed;
+      text-align: center;
+      line-height: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      color: $black1;
+      font-weight: 500;
+      font-size: 18px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .content {
+      color: $black1;
+    }
+
+    &:before {
+      content: '';
+      height: 6px;
+      position: absolute;
+      top: 30px;
+      margin-top: -3px;
+      background-color: #ededed;
+      width: calc(50% - 88px);
+    }
+
+    &.step-01 {
+      &:before {
+        display: none;
+      }
+    }
+
+    &.step-02 {
+      &:before {
+        right: calc(50% + 42px);
+      }
+
+      &.active {
+        &:before {
+          background-color: $color3;
+        }
+      }
+    }
+
+    &.step-03 {
+      &:before {
+        right: 72px;
+        width: calc(50% - 50px);
+      }
+
+      &.active {
+        &:before {
+          background-color: $color3;
+        }
+      }
+    }
+
+    &.active {
+      .icon {
+        background-color: $color3;
+        color: $white;
+      }
+    }
+  }
+}
+
+.form-ttgh {
+  margin-bottom: 50px;
+
+  .title {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .form-control {
+    @include placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      color: #aab6b6;
+    }
+  }
+
+  &.new {
+    .inner {
+      background-color: $white;
+      padding: 30px 20px;
+      width: 100%;
+      max-width: 760px;
+    }
+
+    form {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      width: calc(50% - 20px);
+      min-width: calc(50% - 20px);
+
+      @include breakpoint-down('phone') {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+
+    .footer-form {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      .custom-control-label {
+        color: $black2;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .btn-outline-white {
+        width: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+        line-height: 24px;
+
+        .icon {
+          color: #aab6b6;
+          font-size: 18px;
+          display: inline-block;
+          vertical-align: baseline;
+        }
+
+        &.active {
+          border-color: $color3;
+          color: $color3;
+
+          .icon {
+            color: $color3;
+          }
+        }
+      }
+
+      .group-btn {
+        display: flex;
+
+        .btn {
+          height: 50px;
+          font-size: 16px;
+          font-weight: 500;
+
+          &.btn-huy {
+            width: 90px;
+            margin-right: 10px;
+          }
+
+          &.btn-orange {
+            flex-grow: 1;
+          }
+        }
+      }
+
+      @include breakpoint-down('tablet') {
+        .form-group {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.current {
+    .inner {
+      width: 100%;
+      max-width: 760px;
+    }
+
+    .item-ttgh {
+      margin-bottom: 20px;
+    }
+
+    .add-more-ttgh {
+      padding-top: 10px;
+
+      .btn-color3-white {
+        width: 100%;
+        max-width: 360px;
+        background-color: $white;
+        border: 1px solid $color3;
+        border-radius: 3px;
+        height: 50px;
+        color: $color3;
+        font-weight: 500;
+        font-size: 14px;
+
+        &:hover {
+          background-color: $color3;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.item-ttgh {
+  padding: 20px;
+  background-color: $white;
+  color: $black2;
+  position: relative;
+
+  .title-ttgh {
+    font-size: 16px;
+    font-weight: 500;
+    color: $black1;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  .btn-orange {
+    min-width: 200px;
+    margin-right: 10px;
+  }
+
+  .btn-grey {
+    margin-right: 10px;
+  }
+
+  .btn-delete {
+    color: #ff3618;
+  }
+
+  .choose {
+    background-color: rgba(48, 165, 86, .2);
+    padding: 7px 20px;
+    color: #30a556;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &.active {
+    padding-top: 50px;
+
+    .choose {
+      display: block;
+    }
+  }
+
+  @include breakpoint-down('smallphone') {
+    .btn {
+      margin-top: 15px;
+    }
+  }
+}

@@ -198,3 +198,11 @@ $breakpoints: (
     @content;
   }
 }
+
+// generate th width in table
+$class: w--;
+@for $i from 30 through 300 {
+  .#{$class}#{$i} {
+    width: #{$i}px;
+  }
+}

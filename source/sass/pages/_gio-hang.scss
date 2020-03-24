@@ -1,0 +1,145 @@
+.cart-title {
+  font-size: 24px;
+  font-weight: 400;
+  color: $black1;
+  margin-bottom: 15px;
+}
+
+.cart-title-2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: $black1;
+}
+
+.check-all {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(19, 39, 38, .08);
+  margin-bottom: 2px;
+  background-color: $white;
+
+  .delete {
+    color: #ff3618;
+    cursor: pointer;
+  }
+
+  .custom-control-label {
+    white-space: nowrap;
+    padding-left: 10px;
+    line-height: 1.5;
+  }
+}
+
+.table-gio-hang {
+  min-width: 680px;
+
+  .cover {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid #d1d4d4;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .title {
+    font-size: 16px;
+    color: $black1;
+    font-weight: 400;
+    padding-top: 4px;
+  }
+
+  .brand {
+    color: $black3;
+    margin-bottom: 5px;
+
+    a {
+      color: $color3;
+    }
+  }
+
+  .delete {
+    color: #ff3618;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .price {
+    font-weight: 500;
+    color: $orange;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .price-old {
+    color: $black3;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+  }
+
+  .sale {
+    color: $black1;
+    font-size: 16px;
+  }
+
+  .count {
+    margin-bottom: 5px;
+  }
+}
+
+.box-c {
+  background-color: $white;
+  padding: 26px 20.5px;
+
+  &.bt {
+    border-top: 4px solid $color3;
+  }
+}
+
+.vat {
+  font-size: 12px;
+  color: $black2;
+}
+
+.item-ttdh {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .label {
+    color: $black3;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+.btn-dh {
+  font-size: 16px;
+  height: 50px;
+}
+
+.form-mgg {
+  .form-control {
+    border-radius: 3px;
+  }
+}
+
+.gio-hang-wrap {
+  margin-bottom: 100px;
+
+  @include breakpoint-down('desktop') {
+    margin-bottom: 30px;
+  }
+}
+
+.row-inner {
+  width: 100%;
+}

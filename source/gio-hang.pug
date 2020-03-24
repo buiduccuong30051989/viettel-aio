@@ -1,0 +1,82 @@
+extends modules/layout/_page-default
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('Gio hang')
+block header
+  +header
+
+block main
+  .breadcrumb-wrap.bg-gray1.mb-30
+    .container.sm
+      .row
+        +breadcrumb
+
+  .gio-hang-wrap
+    .container.sm
+      .row
+        h3.cart-title Giỏ hàng của bạn
+        .row-inner
+          .row
+            .col-lg-8.mb-4.mb-lg-0
+              .check-all
+                .custom-control.custom-checkbox
+                  input#customCheckAll.custom-control-input(type="checkbox")
+                  label.custom-control-label.no-wrap(for="customCheckAll") Chọn tất cả 3 sản phẩm
+                span.delete Xoá
+              .table-responsive
+                table.table-common.table-gio-hang
+                  tbody
+                    - for(var i = 0; i < 3; i++)
+                        tr
+                          td.w--60.align-middle
+                            .custom-control.custom-checkbox
+                              input.custom-control-input(type="checkbox", id=`customCheck${i}`)
+                              label.custom-control-label(for=`customCheck${i}`)
+                          td.w--80.px-0
+                            .cover
+                              img(src='images/img-sp.png', alt='cover')
+                          td
+                            h4.title Máy lạnh z1.5 HP FTKQ35SAVMV
+                            p.brand Nhà cung cấp: 
+                              a(href='#') Daikin
+                            span.delete Xoá
+                          td.text-right.w--160
+                            p.price 95.000.000đ
+                            p.price-old 105.676.300đ
+                            span.sale -10%
+                          td.w--140
+                            p.count Số lượng
+                            .input-group.counter-form
+                              .input-group-prepend.js-btn-number(disabled='disabled', data-type='minus', data-field='quant[1]')
+                                span.input-group-text -
+                              input.form-control.js-input-number(type='text', name='quant[1]', value='1', min='1', max='10')
+                              .input-group-append.js-btn-number(data-type='plus', data-field='quant[1]')
+                                span.input-group-text +
+            .col-lg-4
+              .box-c.sd.bt.mb-30
+                h4.cart-title-2.mb-4 Thông tin đơn hàng
+                .item-ttdh
+                  span.label Tạm tính:
+                  span.content 95.000.000đ
+                .item-ttdh
+                  span.label Phí giao hàng:
+                  span.content 0đ
+                .item-ttdh.mb-1
+                  span.label Tổng tiền hàng:
+                  span.price 95.000.000đ
+                .d-flex.justify-content-end.mb-4
+                  span.vat Đã bao gồm VAT (Nếu có)
+                button.btn.btn-orange.btn-lg.w-100.btn-dh Đặt hàng
+              .box-c.sd
+                h4.cart-title-2.mb-3 Mã giảm giá
+                .d-flex.justify-content-between
+                  .form-group.mr-3.flex-grow-1.mb-0.form-mgg
+                    input.form-control(type="text")
+                  button.btn.btn-color3 Áp dụng
+  .sub-footer
+    .container.sm
+      +featuresSubFooter
+
+  +homeCta

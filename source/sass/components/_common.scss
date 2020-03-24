@@ -28,6 +28,24 @@
   }
 }
 
+.common-select-02 {
+  border: 1px solid #d1d4d4;
+  height: 40px;
+  color: $black1;
+  font-size: 14px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  background-color: $white;
+  border-radius: 0;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: $orange;
+  }
+}
+
 .cn {
   color: $green;
   font-size: 12px;
