@@ -3,6 +3,12 @@
   border-radius: 3px;
 }
 
+.btn:focus,
+.btn.focus {
+  box-shadow: none;
+  outline: 0;
+}
+
 .btn-orange {
   background-color: $orange;
   color: $white;

@@ -1,0 +1,247 @@
+.accordion {
+  .card {
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
+
+  & > .card > .card-header {
+    margin-bottom: 0;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $black1;
+    text-decoration: none;
+    padding: 2px 15px;
+    background-color: $white;
+    border-color: #d4dde2;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      width: 100%;
+      justify-content: space-between;
+      color: $color3;
+      text-align: left;
+
+      .ic-circle-check {
+        color: #30a556;
+        font-size: 24px;
+        transition: all .3s;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        [class^='ic-'],
+        [class*=' ic-'] {
+          color: $color3;
+          font-size: 24px;
+        }
+      }
+
+      &.collapsed {
+        color: $black2;
+
+        [class^='ic-'],
+        [class*=' ic-'] {
+          color: #aab6b6;
+        }
+
+        .ic-circle-check {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    padding: 20px;
+    border-bottom: 1px solid #d4dde2;
+
+    .inner {
+      padding: 0 8px;
+    }
+  }
+}
+
+.form-visa {
+  width: 100%;
+  max-width: 340px;
+
+  .form-group {
+    label {
+      color: $black1;
+      font-weight: 500;
+    }
+
+    .custom-control {
+      .custom-control-label {
+        color: $black2;
+      }
+    }
+  }
+
+  .field-half {
+    display: flex;
+    justify-content: space-between;
+
+    .form-group {
+      width: calc(50% - 5px);
+    }
+  }
+}
+
+.btn-group.group-bank {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  & > .btn:not(:first-child),
+  & > .btn-group:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  .btn {
+    border: 1px solid #d4dde2;
+    height: 60px;
+    width: 100px;
+    margin: 8px;
+    flex: 0 0 100px;
+    padding: 10px 15px;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+
+    &.active {
+      border-color: $color3;
+      box-shadow: 0 0 0 2px $color3;
+    }
+  }
+}
+
+.bank-info {
+  .bank-title {
+    color: $black1;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-dm {
+  height: 50px;
+  min-width: 240px;
+}
+
+.pttt-wrap {
+  margin-bottom: 56px;
+
+  .box {
+    padding: 24px 22px;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+.box-tt {
+  margin-bottom: 20px;
+  color: $black2;
+
+  .box-tt-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #d4dde2;
+
+    .title-tt {
+      font-size: 14px;
+      margin: 0;
+      font-weight: 400;
+      color: $black1;
+    }
+
+    a {
+      font-weight: 500;
+      color: $color3;
+    }
+  }
+
+  .box-tt-body {
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $black1;
+  }
+
+  .price {
+    color: $black1;
+
+    &.lg {
+      font-size: 16px;
+    }
+
+    &.xl {
+      font-size: 24px;
+      font-weight: 500;
+      color: $orange;
+    }
+  }
+
+  .field-tt {
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: baseline;
+
+    a {
+      color: $color3;
+    }
+  }
+
+  .item {
+    border-bottom: 1px solid #d4dde2;
+    width: 100%;
+    margin-bottom: 20.5px;
+    padding-bottom: 10px;
+  }
+
+  .f-210 {
+    flex: 0 0 210px;
+    width: 210px;
+
+    @include breakpoint-down('desktop') {
+      flex: 0 0 180px;
+      width: 180px;
+    }
+  }
+
+  .sum {
+    padding-bottom: 15px;
+
+    .note {
+      font-size: 12px;
+    }
+  }
+}

@@ -250,3 +250,6 @@ $icon-fonts: 'ic';
   content: '\e92e';
 }
 
+.#{$icon-fonts}-circle-check:before {
+  content: '\e92f';
+}

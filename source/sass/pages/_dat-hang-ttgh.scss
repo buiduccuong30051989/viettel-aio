@@ -124,6 +124,15 @@
     .form-group {
       width: calc(50% - 20px);
       min-width: calc(50% - 20px);
+      position: relative;
+
+      .valid-feedback {
+        padding-top: 4px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%);
+      }
 
       @include breakpoint-down('phone') {
         width: 100%;
@@ -281,6 +290,122 @@
   @include breakpoint-down('smallphone') {
     .btn {
       margin-top: 15px;
+    }
+  }
+}
+
+.modal-add-new-address {
+  .modal-title {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .close {
+    width: 16px;
+    height: 16px;
+    background-color: #d1d4d4;
+    color: $white;
+    font-size: 12px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-control {
+    @include placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      color: #aab6b6;
+    }
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    width: calc(50% - 20px);
+    min-width: calc(50% - 20px);
+    position: relative;
+
+    .valid-feedback {
+      padding-top: 4px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(100%);
+    }
+
+    @include breakpoint-down('phone') {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  .footer-form {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .custom-control-label {
+      color: $black2;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .btn-outline-white {
+      width: calc(50% - 5px);
+      max-width: calc(50% - 5px);
+      line-height: 24px;
+
+      .icon {
+        color: #aab6b6;
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: baseline;
+      }
+
+      &.active {
+        border-color: $color3;
+        color: $color3;
+
+        .icon {
+          color: $color3;
+        }
+      }
+    }
+
+    .group-btn {
+      display: flex;
+
+      .btn {
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
+
+        &.btn-huy {
+          width: 90px;
+          margin-right: 10px;
+        }
+
+        &.btn-orange {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    @include breakpoint-down('tablet') {
+      .form-group {
+        width: 100%;
+      }
     }
   }
 }

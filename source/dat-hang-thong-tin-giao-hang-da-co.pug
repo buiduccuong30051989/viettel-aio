@@ -55,9 +55,71 @@ block main
               button.btn.btn-grey Sửa
               button.btn.btn-grey.btn-delete Xoá
           .add-more-ttgh.d-flex.justify-content-center.mb-30
-            button.btn.btn-color3-white Thêm địa chỉ mới
+            button.btn.btn-color3-white(type="button" data-toggle="modal" data-target=".modal-add-new-address") Thêm địa chỉ mới
   .sub-footer
     .container.sm
       +featuresSubFooter
 
   +homeCta
+  .modal.fade.modal-add-new-address(tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-lg.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h5.modal-title THÊM ĐỊA CHỈ NHẬN HÀNG MỚI
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") ×
+        .modal-body
+          form
+            .form-group
+              label(for="hnt") Họ và tên
+              input#hnt.form-control.is-invalid(type='text', placeholder='Họ và tên')
+              .valid-feedback.form-text.invalid-feedback.text-right Vui lòng không bỏ trống
+            .form-group
+              label(for="sdt") Số điện thoại
+              input#sdt.form-control(type='text', placeholder='Nhập số điện thoại ')
+            .form-group
+              label(for="tp") Tỉnh/Thành phố
+              select#tp.custom-select.common-select-02
+                option Vui lòng chọn tỉnh , thành phố
+                option 2
+                option 3
+                option 4
+                option 5
+            .form-group
+              label(for="qh") Quận/Huyện
+              select#qh.custom-select.common-select-02
+                option Vui lòng chọn quận, huyện
+                option 2
+                option 3
+                option 4
+                option 5
+            .form-group
+              label(for="px") Phường/Xã
+              select#px.custom-select.common-select-02
+                option Vui lòng chọn phường, xã
+                option 2
+                option 3
+                option 4
+                option 5
+            .form-group
+              label(for="dc") Địa chỉ
+              input#dc.form-control(type='text', placeholder='Nhập số nhà, tên đường')
+            .footer-form
+              .form-group
+                label Loại địa chỉ
+                .btn-group.btn-group-toggle(data-toggle="buttons")
+                  label.btn.btn-outline-white
+                    input#option1(type="radio" name="options" checked="")
+                    span.icon.ic-house.pr-2
+                    |  Nhà
+                  label.btn.btn-outline-white
+                    input#option2(type="radio" name="options")
+                    span.icon.ic-suitcase.pr-2
+                    |  Văn phòng
+              .form-group
+                .custom-control.custom-checkbox
+                  input#customCheckdefault.custom-control-input(type="checkbox", checked)
+                  label.custom-control-label.no-wrap.pl-2(for="customCheckdefault") Đặt làm địa chỉ mặc định
+              .form-group.group-btn.mb-0
+                button.btn.btn-grey.btn-lg.btn-huy Huỷ
+                button.btn.btn-orange.btn-lg Lưu và tiếp tục
