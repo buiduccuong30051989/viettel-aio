@@ -1,0 +1,74 @@
+extends modules/layout/_page-default
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('don-hang-cua-toi')
+block header
+  +header
+
+block main
+  .breadcrumb-wrap.bg-gray1.mb-30
+    .container.sm
+      .row
+        +breadcrumb
+
+  .dhct-wrap
+    .container.sm
+      .row
+        .row-inner
+          .row
+            .col-lg-3.mb-4.mb-lg-0
+              .user-sidebar.sd
+                .us-header
+                  .avatar
+                    .cover
+                      img(src='https://i.pravatar.cc/300', alt='cover')
+                    .content
+                      p.mb-1 Xin chào
+                      p.name.mb-0 Công Nguyễn
+                .us-body
+                  a.item(href="#")
+                    span.ic-account
+                    span Thông tin tài khoản 
+                  a.item(href="#")
+                    span.ic-notifications
+                    span Thông báo của tôi
+                  a.item(href="#")
+                    span.ic-mycart
+                    span Đơn hàng của tôi
+                  a.item(href="#")
+                    span.ic-h-payment
+                    span Thông tin thanh toán
+                  a.item(href="#")
+                    span.ic-view
+                    span Sản phẩm đã xem
+            .col-lg-9.mb-4.mb-lg-0
+              h3.cart-title.mb-2 Đơn hàng của tôi
+              .table-responsive
+                table.table-common.table-dhct
+                  thead
+                    tr
+                      th.w--125 Mã đơn hàng
+                      th.w--125 Ngày mua
+                      th Sản phẩm
+                      th.w--125 Tổng tiền
+                      th.w--100 Trạng thái
+                  tbody
+                    - for(var i = 0; i < 7; i++)
+                        tr
+                          td
+                            span.text-orange MDH123
+                          td
+                            span 19/5/2018
+                          td
+                            span Máy lạnh z1.5 HP FTKQ35SAVMV
+                          td
+                            span 11.140.000đ
+                          td
+                            span Đang vận chuyển
+  .sub-footer
+    .container.sm
+      +featuresSubFooter
+
+  +homeCta

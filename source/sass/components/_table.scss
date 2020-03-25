@@ -28,14 +28,16 @@
   }
 
   th {
-    border-right: 1px solid $black3;
+    border-right: 0;
     border-top: 0;
-    border-bottom: 1px solid $black3;
+    border-bottom: 0;
     text-align: left;
-    padding: 13px 8px;
+    padding: 11px 20px;
     vertical-align: bottom;
     background-color: $white;
     position: relative;
+    font-size: 14px;
+    font-weight: 500;
 
     &:before {
       content: '';

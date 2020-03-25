@@ -56,11 +56,6 @@ block main
               button.btn.btn-grey.btn-delete Xoá
           .add-more-ttgh.d-flex.justify-content-center.mb-30
             button.btn.btn-color3-white(type="button" data-toggle="modal" data-target=".modal-add-new-address") Thêm địa chỉ mới
-  .sub-footer
-    .container.sm
-      +featuresSubFooter
-
-  +homeCta
   .modal.fade.modal-add-new-address(tabindex="-1" role="dialog" aria-hidden="true")
     .modal-dialog.modal-lg.modal-dialog-centered
       .modal-content
@@ -123,3 +118,5 @@ block main
               .form-group.group-btn.mb-0
                 button.btn.btn-grey.btn-lg.btn-huy Huỷ
                 button.btn.btn-orange.btn-lg Lưu và tiếp tục
+block footer
+  +footerSm

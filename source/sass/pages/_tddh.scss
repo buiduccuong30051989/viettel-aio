@@ -1,0 +1,257 @@
+.tddh-wrap {
+  padding-bottom: 65px;
+
+  .title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .right {
+      .btn:first-of-type {
+        margin-right: 10px;
+      }
+
+      .btn {
+        min-width: 150px;
+        font-weight: 400;
+
+        &.btn-outline-orange {
+          background-color: rgba(247, 134, 36, .08);
+
+          &:hover {
+            background-color: $orange;
+            color: $white;
+          }
+        }
+
+        &.btn-outline-color3 {
+          background-color: rgba(0, 145, 143, .08);
+
+          &:hover {
+            background-color: $color3;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    @include breakpoint-down('tablet') {
+      flex-wrap: wrap;
+
+      .cart-title {
+        width: 100%;
+        padding-bottom: 15px;
+      }
+
+      .right {
+        width: 100%;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.box-tt-body {
+  &.ttsp {
+    display: flex;
+    justify-content: space-between;
+    color: $black2;
+
+    .right {
+      width: 240px;
+      max-width: 240px;
+
+      p {
+        margin-bottom: 8px;
+      }
+    }
+
+    .left {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+
+      .cover {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        border: 1px solid #d1d4d4;
+        margin-right: 20px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        p {
+          margin-bottom: 8px;
+        }
+
+        .name {
+          font-size: 16px;
+          color: $black1;
+          font-weight: 400;
+          margin-bottom: 8px;
+        }
+
+        strong {
+          font-weight: 400;
+          color: $black1;
+        }
+
+        a {
+          color: $color3;
+        }
+      }
+    }
+
+    .field {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include breakpoint-down('phone') {
+      flex-wrap: wrap;
+
+      .left {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .right {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.tddh {
+    padding: 20px 50px 30px;
+
+    .title-tddh {
+      font-size: 14px;
+      font-weight: 500;
+      color: $black1;
+      text-align: center;
+
+      @include breakpoint-down('phone') {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include breakpoint-down('phone') {
+      padding: 20px 12px;
+    }
+  }
+}
+
+.step-wrap.tddh {
+  .inner {
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+
+  .item {
+    width: 80px;
+    border-bottom: 0;
+    margin-bottom: 0;
+
+    .icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .content {
+      text-align: center;
+      width: 80px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &:before {
+      height: 4px;
+      width: calc(33.3333% - 40px);
+      top: 24px;
+    }
+
+    &.active {
+      &:before {
+        background-color: $color3;
+      }
+    }
+
+    &.step-02 {
+      &:before {
+        right: calc(66.6666% - 6px);
+      }
+    }
+
+    &.step-03 {
+      &:before {
+        right: calc(33.3333% + 20px);
+      }
+    }
+
+    &.step-04 {
+      &:before {
+        right: 47px;
+      }
+    }
+  }
+
+  @include breakpoint-down('phone') {
+    display: none;
+  }
+}
+
+.step-detail {
+  border: 1px solid #d4dde2;
+  padding: 22px 20px;
+
+  p {
+    margin-bottom: 30px;
+
+    span:first-of-type {
+      width: 110px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.box-tt.spilit {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  .field {
+    flex-grow: 1;
+    max-width: calc(33.3333% - 20px);
+  }
+
+  .box-tt-header {
+    padding: 10px 0;
+  }
+
+  .box-tt-body {
+    padding-left: 0;
+    padding-right: 0;
+
+    .name {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  @include breakpoint-down('phone') {
+    flex-wrap: wrap;
+
+    .field {
+      &:not(:last-of-type) {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

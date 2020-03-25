@@ -1,0 +1,138 @@
+extends modules/layout/_page-default
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('theo-doi-don-hang')
+block header
+  +header
+
+block main
+  .breadcrumb-wrap.bg-gray1.mb-30
+    .container.sm
+      .row
+        +breadcrumb
+
+  .tddh-wrap
+    .container.sm
+      .row
+        .row-inner
+          .row
+            .col-lg-3.mb-4.mb-lg-0
+              .user-sidebar.sd
+                .us-header
+                  .avatar
+                    .cover
+                      img(src='https://i.pravatar.cc/300', alt='cover')
+                    .content
+                      p.mb-1 Xin chào
+                      p.name.mb-0 Công Nguyễn
+                .us-body
+                  a.item(href="#")
+                    span.ic-account
+                    span Thông tin tài khoản 
+                  a.item(href="#")
+                    span.ic-notifications
+                    span Thông báo của tôi
+                  a.item(href="#")
+                    span.ic-mycart
+                    span Đơn hàng của tôi
+                  a.item(href="#")
+                    span.ic-h-payment
+                    span Thông tin thanh toán
+                  a.item(href="#")
+                    span.ic-view
+                    span Sản phẩm đã xem
+            .col-lg-9.mb-4.mb-lg-0
+              .title-wrap.mb-3
+                h3.cart-title.mb-0 Chi tiết đơn hàng #MDH123
+                .right
+                  button.btn.btn-outline-orange
+                    span.ic-circle-check.pr-3
+                    span Báo sự cố
+                  button.btn.btn-outline-color3
+                    span.ic-star.pr-3
+                    span Gửi đánh giá
+              .sd.box-tt
+                .box-tt-header
+                  h4.title-tt THÔNG TIN SẢN PHẨM
+                .box-tt-body.ttsp
+                  .left
+                    .cover
+                      img(src='images/img-sp.png', alt='cover')
+                    .content
+                      h4.name Máy lạnh z1.5 HP FTKQ35SAVMV
+                      p Số lượng:
+                        strong.pl-2 1
+                      p.mb-0 Nhà cung cấp:
+                        a(href='#').pl-2 Daikin
+                  .right
+                    p.field
+                      span Tạm tính:
+                      span.text-black1 11.140.000đ
+                    p.field
+                      span Phí vận chuyển:
+                      span.text-black1 0đ
+                    .field
+                      span Tổng tiền:
+                      strong.text-black1 11.140.000đ
+
+              .sd.box-tt
+                .box-tt-header
+                  h4.title-tt THEO DÕI ĐƠN HÀNG
+                .box-tt-body.tddh
+                  h4.title-tddh Trạng thái: Đang vận chuyển
+                  .step-wrap.tddh
+                    .inner
+                      .item.step-01.active
+                        .icon
+                        .content
+                          span Đặt hàng thành công
+                      .item.step-02.active
+                        .icon
+                        .content
+                          span Đã tiếp nhận đơn hàng
+                      .item.step-03.active
+                        .icon
+                        .content
+                          span Đang vận chuyển
+                      .item.step-04
+                        .icon
+                        .content
+                          span Giao hàng thành công
+
+                  .step-detail
+                    p
+                      span 19/2/209 - 06:00 
+                      span.text-black1 Hàng được nhập vào kho
+                    p
+                      span 19/2/209 - 07:00 
+                      span.text-black1 Hàng được đóng gói
+                    p.mb-0
+                      span 19/2/209 - 08:00 
+                      span.text-black1 Hàng được vận chuyển
+
+              .sd.box-tt.spilit
+                .field
+                  .box-tt-header
+                    h4.title-tt.text-uppercase Địa chỉ nhận
+                  .box-tt-body
+                    p.name Nguyễn Thành Công
+                    p Địa chỉ: 36 Phố Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội, Việt Nam
+                    p.mb-0 Điện thoại: 0999999999
+                .field
+                  .box-tt-header
+                    h4.title-tt.text-uppercase Hình thức giao hàng
+                  .box-tt-body
+                    span Miễn phí vận chuyển
+                .field
+                  .box-tt-header
+                    h4.title-tt.text-uppercase Hình thức thanh toán
+                  .box-tt-body
+                    span Thanh toán tiền mặt khi nhận hàng
+
+  .sub-footer
+    .container.sm
+      +featuresSubFooter
+
+  +homeCta
