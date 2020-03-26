@@ -18,6 +18,12 @@
         &.btn-outline-orange {
           background-color: rgba(247, 134, 36, .08);
 
+          .ic-alert {
+            vertical-align: middle;
+            margin-top: -1px;
+            display: inline-block;
+          }
+
           &:hover {
             background-color: $orange;
             color: $white;
@@ -171,7 +177,7 @@
 
     &:before {
       height: 4px;
-      width: calc(33.3333% - 40px);
+      width: calc(33.3333% - 50px);
       top: 24px;
     }
 
@@ -183,19 +189,19 @@
 
     &.step-02 {
       &:before {
-        right: calc(66.6666% - 6px);
+        right: calc(66.6666% - 22px);
       }
     }
 
     &.step-03 {
       &:before {
-        right: calc(33.3333% + 20px);
+        right: calc(33.3333% + 22px);
       }
     }
 
     &.step-04 {
       &:before {
-        right: 47px;
+        right: 67px;
       }
     }
   }

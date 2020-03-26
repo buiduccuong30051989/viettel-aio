@@ -22,6 +22,32 @@ mixin product(cover, title, price, priceOld, type)
         span.ic-star.active
         span.ic-star
       span (16 đánh giá)
+    .content-list
+      .top
+        .left
+          h3.product-name
+            a(href='#')=title
+          .rating-wrap
+            .rating
+              span.ic-star.active
+              span.ic-star.active
+              span.ic-star.active
+              span.ic-star.active
+              span.ic-star
+            span (16 đánh giá)
+          p.brand Thương hiệu:
+            a(href='#').pl-2 Daikin
+        .right.text-left.text-md-right
+          p.product-price=price
+          p.product-price--old=priceOld
+          .badge.badge-orange2 -20%
+      .short-detail-product
+        ul
+          li Loại máy: Điều hòa một chiều
+          li Công nghệ: Inverter
+          li Công suất: 12000 BTU
+          li Cục nóng: 32kg, kích thước: 550 x 658 x 275 mm
+          li Cục lạnh: 8kg, kích thước: 283 x 770 x 203 mm
 
 mixin productSlider(type)
   .sd-content

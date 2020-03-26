@@ -116,3 +116,14 @@
   }
 }
 
+.badge {
+  font-size: 16px;
+  min-width: 60px;
+  height: 30px;
+  padding: 7px;
+}
+
+.badge-orange2 {
+  background-color: $orange2;
+  color: $white;
+}

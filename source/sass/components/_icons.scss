@@ -253,3 +253,7 @@ $icon-fonts: 'ic';
 .#{$icon-fonts}-circle-check:before {
   content: '\e92f';
 }
+
+.#{$icon-fonts}-alert:before {
+  content: '\e930';
+}

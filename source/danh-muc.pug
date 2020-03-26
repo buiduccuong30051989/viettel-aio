@@ -1,0 +1,186 @@
+extends modules/layout/_page-default
+include modules/_product-slider
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('Home')
+block header
+  +header('danh-muc')
+
+block main
+  .breadcrumb-wrap.bg-gray1.mb-30
+    .container.sm
+      .row
+        +breadcrumb
+  .home-banner.dm
+    .container.sm
+      .row
+        .row-inner
+          .row
+            .col-lg-6
+              a(href='#')
+                img(src='images/banner-01.jpg', alt='cover')
+            .col-lg-6
+              a(href='#')
+                img(src='images/banner-02.jpg', alt='cover')
+  .category
+    .container.sm
+      .row
+        .row-inner
+          .row
+            .col-lg-3.mb-4.mb-lg-0
+              .sidebar-cat
+                .filter-item
+                  h4.filter-title(type="button" data-toggle="collapse" data-target="#dm" aria-expanded="true" aria-controls="dm")
+                    | DANH MỤC
+                  #dm.collapse.show
+                    .list-filter
+                      a.filter-link.active(href='#') Điện Tử - Điện lạnh
+                      a.filter-link(href='#') Nhà thông minh
+                      a.filter-link(href='#') Năng lượng mặt trời
+                      a.filter-link(href='#') ICT
+                      a.filter-link(href='#') Dịch vụ nhân công
+                .filter-item
+                  h4.filter-title(type="button" data-toggle="collapse" data-target="#th" aria-expanded="true" aria-controls="th")
+                    | THƯƠNG HIỆU
+                  #th.collapse.show
+                    .list-filter
+                      a.filter-link(href='#') Atex
+                      a.filter-link(href='#') Blouder
+                      a.filter-link(href='#') Confizla
+                      a.filter-link(href='#') Duza
+                      a.filter-link(href='#') Lumi
+                      a.read-more-filter(href='#') Xem thêm >
+                .filter-item
+                  h4.filter-title(type="button" data-toggle="collapse" data-target="#xx" aria-expanded="true" aria-controls="xx")
+                    | XUẤT XỨ
+                  #xx.collapse.show
+                    .list-filter
+                      .form-group.xx
+                        .custom-control.custom-checkbox
+                          input#customCheckdefault1.custom-control-input(type="checkbox", checked)
+                          label.custom-control-label.no-wrap.pl-2(for="customCheckdefault1") Việt Nam
+                      .form-group.xx
+                        .custom-control.custom-checkbox
+                          input#customCheckdefault2.custom-control-input(type="checkbox")
+                          label.custom-control-label.no-wrap.pl-2(for="customCheckdefault2") Anh
+                      .form-group.xx
+                        .custom-control.custom-checkbox
+                          input#customCheckdefault3.custom-control-input(type="checkbox")
+                          label.custom-control-label.no-wrap.pl-2(for="customCheckdefault3") Mỹ
+                      .form-group.xx
+                        .custom-control.custom-checkbox
+                          input#customCheckdefault4.custom-control-input(type="checkbox")
+                          label.custom-control-label.no-wrap.pl-2(for="customCheckdefault4") Trung Quốc
+                      .form-group.xx
+                        .custom-control.custom-checkbox
+                          input#customCheckdefault5.custom-control-input(type="checkbox")
+                          label.custom-control-label.no-wrap.pl-2(for="customCheckdefault5") Hàn Quốc
+                      a.read-more-filter(href='#') Xem thêm >
+                .filter-item
+                  h4.filter-title(type="button" data-toggle="collapse" data-target="#dg" aria-expanded="true" aria-controls="dg")
+                    | ĐÁNH GIÁ
+                  #dg.collapse.show
+                    .list-filter-rating
+                      .item-rating
+                        .rating
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star.active
+                        span.text-rating 5 sao
+                      .item-rating
+                        .rating
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star
+                        span.text-rating 4 sao trở lên
+                      .item-rating
+                        .rating
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star
+                          span.ic-star
+                        span.text-rating 3 sao trở lên
+                      .item-rating
+                        .rating
+                          span.ic-star.active
+                          span.ic-star.active
+                          span.ic-star
+                          span.ic-star
+                          span.ic-star
+                        span.text-rating 2 sao trở lên
+                      .item-rating
+                        .rating
+                          span.ic-star.active
+                          span.ic-star
+                          span.ic-star
+                          span.ic-star
+                          span.ic-star
+                        span.text-rating 1 sao trở lên
+                .filter-item
+                  h4.filter-title(type="button" data-toggle="collapse" data-target="#kg" aria-expanded="true" aria-controls="kg")
+                    | KHOẢNG GIÁ
+                  #kg.collapse.show
+                    .form-kg
+                      .form-group
+                        label(for="tu")
+                          span Từ
+                          span (vnđ)
+                        input#tu.form-control(type='text', value='1000')
+                      .form-group
+                        label(for="de")
+                          span Đến
+                          span (vnđ)
+                        input#de.form-control(type='text', value='200.000.000')
+                .filter-buttons
+                  button.btn.btn-color3 Áp dụng
+                  button.btn.btn-orange Xoá tất cả
+            .col-lg-9
+              .main-cat
+                .cat-filter-header
+                  p.filter-result-text.mb-md-0 Nhà thông minh
+                    span (120 kết quả)
+                  .right
+                    .filter-sort-wrap
+                      label Sắp xếp theo
+                      select.custom-select.common-select-01
+                        option(selected="") Đánh giá mới nhất
+                        option(value="1") One
+                        option(value="2") Two
+                        option(value="3") Three
+                    .filter-view-wrap.btn-group.btn-group-toggle(data-toggle="buttons")
+                      label.btn.active.js-grid
+                        input#option1(type="radio" name="options" checked="")
+                        span.ic-view-grid
+                      label.btn.js-list
+                        input#option2(type="radio" name="options")
+                        span.ic-view-list
+                .products-filter-result.js-filter-view
+                  - for(var i = 0; i < 15; i++)
+                    +product('images/img-sp.png', 'Hệ Thống Điện Mặt Trời 5.04kWp', '95.000.000đ', '105.676.300đ')
+                .pagination-wrap
+                  +pagination
+
+  .home-partner
+    .container.sm
+      .row.justify-content-xl-between.partner.justify-content-center
+        a(href="#")
+          img(src='images/daikin.png', alt='demo')
+        a(href="#")
+          img(src='images/hik.png', alt='demo')
+        a(href="#")
+          img(src='images/samsung.png', alt='demo')
+        a(href="#")
+          img(src='images/lumi.png', alt='demo')
+        a(href="#")
+          img(src='images/panasonic.png', alt='demo')
+
+      +featuresSubFooter
+
+  +homeCta

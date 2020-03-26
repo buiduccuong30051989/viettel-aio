@@ -8,6 +8,19 @@ const ViettelAIO = {
     this.featureImageProductDetail()
     this.mobileMenu()
     this.mobileHeader()
+    this.changeView()
+  },
+
+  changeView: function() {
+    $('.js-grid').on('click', function() {
+      $('.products-filter-result').removeClass('list-view')
+      $('.card-product').removeClass('list-view')
+    })
+
+    $('.js-list').on('click', function() {
+      $('.products-filter-result').addClass('list-view')
+      $('.card-product').addClass('list-view')
+    })
   },
 
   mobileHeader: function() {
