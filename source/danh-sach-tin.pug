@@ -1,0 +1,44 @@
+extends modules/layout/_page-default
+include modules/_product-slider
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('Danh sach tin')
+block header
+  +header
+
+block main
+  .breadcrumb-wrap.bg-gray1
+    .container.sm
+      .row
+        +breadcrumb
+  .dmt-wrap
+    .container.sm
+      .row
+        .header-dmt
+          h2 Tin tức & Khuyến mại
+          .form-group.mb-0
+            select.custom-select.common-select-02
+              option(selected="") Tin tức mới nhất
+              option(value="1") One
+              option(value="2") Two
+              option(value="3") Three
+        .row-inner
+          - for(var i = 1; i < 13; i++)
+            .card-blog.sd
+              .cover
+                a(href='#')
+                  img(src=`https://picsum.photos/id/${i}/360/200`, alt='demo')
+              .content
+                h3
+                  a(href='#') Kinh nghiệm dùng máy lọc không khí hiệu quả, tiết kiệm
+                span.meta 26/12/2019 11:58
+                p Ngày 06/11/2019, Tổng Công ty CP Công trình Viettel (Viettel Construction) tiến hành lễ ký kết hợp tác với Công ty CP Lumi Việt Nam (Đơn vị cung ...
+        .pagination-wrap.w-100.justify-content-center
+          +pagination
+  .sub-footer
+    .container.sm
+      +featuresSubFooter
+
+  +homeCta

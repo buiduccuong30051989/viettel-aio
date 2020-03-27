@@ -326,6 +326,15 @@
     font-weight: 400;
   }
 
+  .modal-content {
+    border-radius: 0;
+  }
+
+  .modal-header {
+    padding-top: 13px;
+    padding-bottom: 12px;
+  }
+
   .close {
     width: 16px;
     height: 16px;

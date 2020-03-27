@@ -1,0 +1,96 @@
+extends modules/layout/_page-default
+include modules/_product-slider
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('Dang Ky SDT')
+block header
+  +header
+
+block main
+  .container
+    .row.justify-content-center.p-5.my-5.align-items-center
+      // Button trigger modal
+      button.btn.btn-orange.btn-lg(type="button" data-toggle="modal" data-target="#exampleModalCenter")
+        | ĐĂNG KÝ TÀI KHOẢN
+      // Modal
+      #exampleModalCenter.modal.fade.modal-dk-sdt(tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            .modal-header
+              h5.modal-title ĐĂNG KÝ TÀI KHOẢN
+              button.close(type="button" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") ×
+            .modal-body
+              form
+                .form-group
+                  label(for="esdt") Số điện thoại *
+                  .input-group
+                    input#esdt.form-control(type='text', placeholder='Nhập số điện thoại')
+                    .input-group-append
+                      button.btn.btn-search.btn-color3.rounded-0(type="button") Gửi mã xác thực
+                .form-group
+                  label(for="mxt") Mã xác thực *
+                  input#mxt.form-control(type='text', placeholder='Nhập mã xác thực')
+                .form-group
+                  label(for="mk") Mật khẩu *
+                  input#mk.form-control(type='password', placeholder='Nhập mật khẩu')
+                .form-group
+                  label(for="ht") Họ tên *
+                  input#ht.form-control(type='text', placeholder='Nhập họ tên')
+                .form-row
+                  .col
+                    .form-group
+                      label(for="mxt") Ngày sinh
+                      select.custom-select.common-select-02
+                        option(selected="") Chọn ngày
+                        option(value="1") One
+                        option(value="2") Two
+                        option(value="3") Three
+                  .col
+                    .form-group
+                      label(for="mxt") Tháng sinh
+                      select.custom-select.common-select-02
+                        option(selected="") Chọn tháng
+                        option(value="1") One
+                        option(value="2") Two
+                        option(value="3") Three
+                  .col
+                    .form-group
+                      label(for="mxt") Năm sinh
+                      select.custom-select.common-select-02
+                        option(selected="") Chọn năm
+                        option(value="1") One
+                        option(value="2") Two
+                        option(value="3") Three
+                .form-group.dk.d-flex.justify-content-center
+                  .custom-control.custom-checkbox
+                    input#customCheckdefault1.custom-control-input(type="checkbox", checked)
+                    label.custom-control-label.no-wrap.pl-2(for="customCheckdefault1") Đăng ký nhận tin tức khuyến mãi
+                button.btn.btn-orange.btn-lg.btn-dn Đăng Ký
+                p.text-note Nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo 
+                  a(href='#') điều kiện sử dụng và chính sách 
+                  | của Viettel AIO.
+            .footer-form
+              a(href='#') Đăng ký qua email
+              a(href='#') Đăng nhập tài khoản
+
+
+  .home-partner
+    .container.sm
+      .row.justify-content-xl-between.partner.justify-content-center
+        a(href="#")
+          img(src='images/daikin.png', alt='demo')
+        a(href="#")
+          img(src='images/hik.png', alt='demo')
+        a(href="#")
+          img(src='images/samsung.png', alt='demo')
+        a(href="#")
+          img(src='images/lumi.png', alt='demo')
+        a(href="#")
+          img(src='images/panasonic.png', alt='demo')
+
+      +featuresSubFooter
+
+  +homeCta

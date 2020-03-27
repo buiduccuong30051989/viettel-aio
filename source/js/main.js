@@ -166,6 +166,7 @@ const ViettelAIO = {
       loop: true,
       dots: true,
       center: true,
+      autoplay: true,
       items: 1,
       animateIn: 'fadeIn',
       animateOut: 'fadeOut'

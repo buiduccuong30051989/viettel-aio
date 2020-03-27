@@ -1,0 +1,64 @@
+extends modules/layout/_page-default
+include modules/_product-slider
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('Dang Nhap')
+block header
+  +header
+
+block main
+  .container
+    .row.justify-content-center.p-5.my-5.align-items-center
+      // Button trigger modal
+      button.btn.btn-orange.btn-lg(type="button" data-toggle="modal" data-target="#exampleModalCenter")
+        | Launch Dang Nhap modal
+      // Modal
+      #exampleModalCenter.modal.fade.modal-dn(tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            .modal-header
+              h5.modal-title ĐĂNG NHẬP TÀI KHOẢN
+              button.close(type="button" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") ×
+            .modal-body
+              form
+                .form-group
+                  label(for="esdt") Email / Số điện thoại
+                  input#esdt.form-control(type='text', placeholder='Nhập số điện thoại hoặc email ')
+                .form-group
+                  label(for="mk") Mật khẩu
+                  input#mk.form-control(type='password', placeholder='Nhập mật khẩu')
+                .text-right.text-forgot-pass
+                  a(href='#') Bạn quên mật khẩu?
+                button.btn.btn-orange.btn-lg.btn-dn Đăng Nhập
+                .divider-dn
+                  span Hoặc
+                button.btn.btn-fb
+                  span.ic-fb
+                  | Đăng nhập qua Facebook
+                button.btn.btn-google
+                  span.ic-google
+                  | Đăng nhập qua Google
+            .footer-form
+              a(href='#') Đăng ký tài khoản
+
+
+  .home-partner
+    .container.sm
+      .row.justify-content-xl-between.partner.justify-content-center
+        a(href="#")
+          img(src='images/daikin.png', alt='demo')
+        a(href="#")
+          img(src='images/hik.png', alt='demo')
+        a(href="#")
+          img(src='images/samsung.png', alt='demo')
+        a(href="#")
+          img(src='images/lumi.png', alt='demo')
+        a(href="#")
+          img(src='images/panasonic.png', alt='demo')
+
+      +featuresSubFooter
+
+  +homeCta

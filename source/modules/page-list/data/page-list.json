@@ -43,6 +43,30 @@
       {
         "title": "Danh muc - Danh muc da chon",
         "url": "danh-muc"
+      },
+      {
+        "title": "Dang nhap",
+        "url": "dang-nhap"
+      },
+      {
+        "title": "Dang ky SDT",
+        "url": "dang-ky-sdt"
+      },
+      {
+        "title": "Dang ky Email",
+        "url": "dang-ky-email"
+      },
+      {
+        "title": "Danh Sach Tin",
+        "url": "danh-sach-tin"
+      },
+      {
+        "title": "Chi Tiet Tin",
+        "url": "chi-tiet-tin"
+      },
+      {
+        "title": "Header Chua Dang Nhap",
+        "url": "heeader-chua-dang-nhap"
       }
     ]
   }

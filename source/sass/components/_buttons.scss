@@ -63,3 +63,44 @@
   border-color: $orange;
   color: $orange;
 }
+
+.btn-fb {
+  color: $white;
+  height: 40px;
+  background-color: #3b5a98;
+  position: relative;
+
+  .ic-fb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: darken($color: #3b5a98, $amount: 10%);
+  }
+}
+
+.btn-google {
+  color: $white;
+  height: 40px;
+  background-color: #df4a32;
+  position: relative;
+  line-height: 24px;
+
+  .ic-google {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: darken($color: #df4a32, $amount: 10%);
+  }
+}

@@ -1,0 +1,105 @@
+extends modules/layout/_page-default
+include modules/_breadcrumb
+include modules/_common
+
+block head
+  +head('Header chua dang nhap')
+block header
+  .header-wrap.js-header-wrap
+    .topbar
+      .container.sm
+        .row.justify-content-md-end.justify-content-center.align-items-center
+          .item.language
+            span Ngôn ngữ
+            .dropdown
+              button.btn.btn-language.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                img(src='images/vn.png')
+              .dropdown-menu.dropdown-menu-right
+                a.dropdown-item(href="#")
+                  span Vietnamese
+                  img(src='images/vn.png')
+                a.dropdown-item(href="#")
+                  span English
+                  img(src='images/en.png')
+          .item.tel
+            span Tổng đài hỗ trợ:
+              a.pl-2(href='tel: 1900989868') 1900 989868
+          .item.upload
+            button.btn.btn-orange.btn-upload.btn-sm.btn-pill
+              span.pr-2.ic-upload
+              | Đề xuất sản phẩm
+    .header(class=type)
+      .container.sm
+        .row.justify-content-between.align-items-center
+          .dropdown.dropdown-cat.d-none.d-xl-block
+            button.btn-menu.dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+              span.ic-menu
+            .dropdown-menu
+              +catMenu('cat-menu')
+          a(href="#js-mobile-menu-btn").btn-menu.d-flex.d-xl-none.justify-content-center.align-items-center
+            span.ic-menu
+          a.logo-wrap(href='index.html')
+            img.logo(src='images/logo.png', alt='logo')
+          .header-mobile-action.d-flex.d-md-none
+            .dropdown.user
+              .dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                .icon
+                  span.ic-account
+              .dropdown-menu.not-log-out.dropdown-menu-right
+                button.btn.btn-dn.btn-orange Đăng nhập
+                button.btn.btn-fb
+                  span.ic-fb
+                  | Đăng nhập qua Facebook
+                butoon.btn.btn-google
+                  span.ic-google
+                  | Đăng nhập qua Google
+            .icon-cart-mobile
+              span.ic-cart
+              span.count 0
+          form.form-search
+            .input-group
+              input.form-control.form-control-lg(type="text" placeholder="Tìm kiếm sản phẩm, dịch vụ,...")
+              .input-group-append
+                button.btn.btn-search.btn-orange(type="button")
+                  span.ic-search
+          .user-info
+            .user-info-inner
+              .item
+                .icon
+                  span.ic-order
+                .content
+                  span Theo dõi đơn hàng
+              .item
+                .icon
+                  span.ic-notifications
+                .content
+                  span Thông báo của bạn
+              .item.dropdown.user
+                .dropdown-toggle(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                  .icon
+                    span.ic-account
+                  .content
+                    span Đăng nhập tài khoản
+                .dropdown-menu.not-log-out
+                  button.btn.btn-dn.btn-orange Đăng nhập
+                  button.btn.btn-fb
+                    span.ic-fb
+                    | Đăng nhập qua Facebook
+                  butoon.btn.btn-google
+                    span.ic-google
+                    | Đăng nhập qua Google
+              .item
+                .icon
+                  span.ic-cart
+                  span.count 0
+                .content
+                  span Giỏ hàng của bạn
+    nav#js-mobile-menu.d-none
+      +catMenu
+
+block main
+  .sub-footer
+    .container.sm
+      +featuresSubFooter
+
+  +homeCta
