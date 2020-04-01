@@ -26,7 +26,7 @@ block main
 
   .kmh.mb-30
     .container.sm
-      .row.sd.flex-wrap
+      .row.sd.flex-wrap.overflow-hidden
         .sd-header.px-3.sd-header-kmh.d-flex.justify-content-between.align-items-center
           .left
             span.ic-fire
@@ -35,29 +35,29 @@ block main
             a(href="#") Xem tất cả
               .icon-circle.ml-2
                 span.ic-next
-        .sd-content
+        .sd-content.br-w
           +productSlider
 
   .spnb.mb-30
     .container.sm
-      .row.sd.flex-wrap
+      .row.sd.flex-wrap.overflow-hidden
         .sd-header.px-3.d-flex.justify-content-between.align-items-center
           h2 SẢN PHẨM NỔI BẬT
           a(href="#") Xem tất cả
             .icon-circle.ml-2
               span.ic-next
-        .sd-content
+        .sd-content.br-w
           +productSlider
 
   .spm.mb-30
     .container.sm
-      .row.sd.flex-wrap
+      .row.sd.flex-wrap.overflow-hidden
         .sd-header.px-3.d-flex.justify-content-between.align-items-center
           h2 SẢN PHẨM MỚI
           a(href="#") Xem tất cả
             .icon-circle.ml-2
               span.ic-next
-        .sd-content
+        .sd-content.br-w
           +productSlider('new')
 
   .dvnb.mb-3

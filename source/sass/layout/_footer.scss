@@ -39,6 +39,11 @@
     a {
       padding-left: 6px;
       text-decoration: none;
+      transition: all .3s;
+
+      &:hover {
+        opacity: .9;
+      }
     }
 
     @include breakpoint-down('desktop') {

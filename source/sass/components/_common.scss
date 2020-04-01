@@ -327,3 +327,8 @@
     }
   }
 }
+
+.br-w {
+  width: calc(100% + 2px);
+  margin-right: -2px;
+}

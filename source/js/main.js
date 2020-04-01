@@ -9,6 +9,35 @@ const ViettelAIO = {
     this.mobileMenu()
     this.mobileHeader()
     this.changeView()
+    this.zoomImage()
+    this.popupGallery()
+  },
+
+  popupGallery: function() {
+    $('.js-popup-gallery').on('click', function() {
+      $('.popup-gallery').magnificPopup('open');
+    });
+    $('.popup-gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {
+          return item.el.attr('title');
+        }
+      }
+    });
+  },
+
+  zoomImage: function() {
+    $('.js-product-zoom').zoom();
   },
 
   changeView: function() {
@@ -64,6 +93,8 @@ const ViettelAIO = {
         .find('.js-product-detail-feature-image-main')
       let url = $(this).attr('src')
       mainImage.attr('src', url)
+      $('.js-product-zoom').trigger('zoom.destroy');
+      $('.js-product-zoom').zoom({url: url});
     })
   },
 

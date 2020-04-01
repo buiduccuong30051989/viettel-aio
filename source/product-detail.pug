@@ -36,21 +36,36 @@ block main
                   span.badge.badge-orange -10%
                 p.product-detail-brand Thương hiệu:
                   a(href='#') Daikin
-              .product-detail-feature-image
-                img.js-product-detail-feature-image-main(src='https://picsum.photos/460?random=1', alt='demo')
+              .product-detail-feature-image.js-product-zoom
+                img.js-product-detail-feature-image-main(src='https://picsum.photos/920?random=1', alt='demo')
               .product-detail-thumbs
                 .item
-                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=1', alt='demo')
+                  img.js-product-detail-thumb(src='https://picsum.photos/920?random=1', alt='demo')
                 .item
-                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=2', alt='demo')
+                  img.js-product-detail-thumb(src='https://picsum.photos/920?random=2', alt='demo')
                 .item
-                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=3', alt='demo')
+                  img.js-product-detail-thumb(src='https://picsum.photos/920?random=3', alt='demo')
                 .item
-                  img.js-product-detail-thumb(src='https://picsum.photos/460?random=4', alt='demo')
-                .item
+                  img.js-product-detail-thumb(src='https://picsum.photos/920?random=4', alt='demo')
+                .item.js-popup-gallery
                   .overlay
                     span Xem tất cả ảnh
                   img(src='https://picsum.photos/460?random=5', alt='demo')
+                .popup-gallery.d-none
+                  a(href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner")
+                    img(src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" width="75" height="75")
+                  a(href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance")
+                    img(src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg" width="75" height="75")
+                  a(href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" title="The Uninvited Guest")
+                    img(src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_s.jpg" width="75" height="75")
+                  a(href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" title="Oh no, not again!")
+                    img(src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_s.jpg" width="75" height="75")
+                  a(href="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg" title="Swan Lake")
+                    img(src="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_s.jpg" width="75" height="75")
+                  a(href="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg" title="The Shake")
+                    img(src="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_s.jpg" width="75" height="75")
+                  a(href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg" title="Who's that, mommy?")
+                    img(src="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_s.jpg" width="75" height="75")
               .product-detail-share
                 p.mb-0 Chia sẻ
                   a(href='#')
